@@ -1,0 +1,57 @@
+# ==========================
+# Quartus Project Ignored Files
+# ==========================
+
+# Bases de datos y compilación
+**/db/
+**/incremental_db/
+**/output_files/
+**/greybox_tmp/
+**/tmp/
+
+# Archivos de bloqueo / locks
+*.rdr.flock
+*.smsg
+*.qarlog
+
+# Reportes y logs regenerables
+*.rpt
+*.log
+*.qdf
+*.pin
+*.done
+*.summary
+*.eqn
+
+# Archivos temporales de Quartus
+*.bak
+*.qws
+*.sdc.rpt
+*.ddb
+
+# Archivos de programación generados
+*.sof
+*.pof
+*.jic
+*.hexout
+
+# Simulation (ModelSim / Questa)
+**/simulation/modelsim/work/
+**/simulation/modelsim/transcript
+**/simulation/modelsim/*.mti
+**/simulation/modelsim/*.wlf
+
+# Archivos de backup de Quartus
+*.bdf.bak
+*.vhd.bak
+*.sv.bak
+*.v.bak
+
+# ==========================
+# SystemVerilog / Verilog / VHDL sources to KEEP
+# ==========================
+# Asegúrate de NO ignorar:
+#   - *.sv, *.v, *.vhd (fuentes HDL)
+#   - *.qpf, *.qsf (proyecto Quartus)
+#   - *.sdc (constraints de tiempo)
+#   - docs/, tb/, etc.
