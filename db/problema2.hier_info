@@ -1,0 +1,61 @@
+|restador_4bit
+A[0] => restador_1bit:rest0.A
+A[1] => restador_1bit:rest1.A
+A[2] => restador_1bit:rest2.A
+A[3] => restador_1bit:rest3.A
+B[0] => restador_1bit:rest0.B
+B[1] => restador_1bit:rest1.B
+B[2] => restador_1bit:rest2.B
+B[3] => restador_1bit:rest3.B
+Bin => restador_1bit:rest0.Bin
+D[0] <= restador_1bit:rest0.D
+D[1] <= restador_1bit:rest1.D
+D[2] <= restador_1bit:rest2.D
+D[3] <= restador_1bit:rest3.D
+Bout <= restador_1bit:rest3.Bout
+
+
+|restador_4bit|restador_1bit:rest0
+A => D.IN0
+A => Bout.IN0
+B => D.IN1
+B => Bout.IN1
+Bin => D.IN1
+Bin => Bout.IN1
+D <= D.DB_MAX_OUTPUT_PORT_TYPE
+Bout <= Bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador_4bit|restador_1bit:rest1
+A => D.IN0
+A => Bout.IN0
+B => D.IN1
+B => Bout.IN1
+Bin => D.IN1
+Bin => Bout.IN1
+D <= D.DB_MAX_OUTPUT_PORT_TYPE
+Bout <= Bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador_4bit|restador_1bit:rest2
+A => D.IN0
+A => Bout.IN0
+B => D.IN1
+B => Bout.IN1
+Bin => D.IN1
+Bin => Bout.IN1
+D <= D.DB_MAX_OUTPUT_PORT_TYPE
+Bout <= Bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador_4bit|restador_1bit:rest3
+A => D.IN0
+A => Bout.IN0
+B => D.IN1
+B => Bout.IN1
+Bin => D.IN1
+Bin => Bout.IN1
+D <= D.DB_MAX_OUTPUT_PORT_TYPE
+Bout <= Bout.DB_MAX_OUTPUT_PORT_TYPE
+
+

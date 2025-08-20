@@ -1,0 +1,32 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity  is
+    Port (
+        A    : in  STD_LOGIC_VECTOR(3 downto 0);
+        B    : in  STD_LOGIC_VECTOR(3 downto 0);
+        Bin  : in  STD_LOGIC;
+        D    : out STD_LOGIC_VECTOR(3 downto 0);
+        Bout : out STD_LOGIC
+    );
+end restador_4bit;
+
+architecture struct of restador_4bit is
+    component restador_1bit
+        Port (
+            A    : in  STD_LOGIC;
+            B    : in  STD_LOGIC;
+            Bin  : in  STD_LOGIC;
+            D    : out STD_LOGIC;
+            Bout : out STD_LOGIC
+        );
+    end component;
+
+    signal b0, b1, b2 : STD_LOGIC;  -- señales intermedias (borrow)
+
+begin
+    rest0: restador_1bit port map(A(0), B(0), Bin, D(0), b0);
+    rest1: restador_1bit port map(A(1), B(1), b0, D(1), b1);
+    rest2: restador_1bit port map(A(2), B(2), b1, D(2), b2);
+    rest3: restador_1bit port map(A(3), B(3), b2, D(3), Bout);
+end struct;

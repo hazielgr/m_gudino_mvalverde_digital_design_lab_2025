@@ -1,0 +1,134 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/simulation/questa
+Erestador_1bit
+Z1 w1755677193
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/restador_1bit.vhd
+Z5 FC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/restador_1bit.vhd
+l0
+L4 1
+V?>JLl@nMdY06[ATobXOOH2
+!s100 enPAzkf3M_7Lj[[LB=d:n0
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1755678152
+!i10b 1
+Z8 !s108 1755678152.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/restador_1bit.vhd|
+Z10 !s107 C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/restador_1bit.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehavior
+R2
+R3
+DEx4 work 13 restador_1bit 0 22 ?>JLl@nMdY06[ATobXOOH2
+!i122 0
+l13
+L12 5
+VJiHTDheN^1jXZE=kd5F3[1
+!s100 =gX54MHnWzg@ZfYK]DM[k2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Erestador_4bit
+Z13 w1755678121
+R2
+R3
+!i122 1
+R0
+Z14 8C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/restador_4bit.vhd
+Z15 FC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/restador_4bit.vhd
+l0
+L4 1
+V8O_DIGdddemNHN:]ojA>J0
+!s100 <:=C`Z0<`8NXz8E3j1J1f3
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/restador_4bit.vhd|
+Z17 !s107 C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/restador_4bit.vhd|
+!i113 1
+R11
+R12
+Astruct
+R2
+R3
+DEx4 work 13 restador_4bit 0 22 8O_DIGdddemNHN:]ojA>J0
+!i122 1
+l27
+L14 19
+VJJHgi5fAMz=;lH7V3XE:L2
+!s100 _WQ6H0@hJczB^N7gPGhH]2
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Erestador_4bit_tb
+Z18 w1755678018
+R2
+R3
+!i122 2
+R0
+Z19 8C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/restador_4bit_TB.vhd
+Z20 FC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/restador_4bit_TB.vhd
+l0
+L4 1
+VDLYIk>bUeo;n;KIc<ba<P2
+!s100 O0`z_<^8MRm<APlaUbo@g1
+R6
+31
+R7
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/restador_4bit_TB.vhd|
+!s107 C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/restador_4bit_TB.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R2
+R3
+DEx4 work 16 restador_4bit_tb 0 22 DLYIk>bUeo;n;KIc<ba<P2
+!i122 2
+l20
+L7 43
+VbiBn2BXU@bR0;iVo=U5TW1
+!s100 6I4RegAhmE621TD81V@_e2
+R6
+31
+R7
+!i10b 1
+R8
+R21
+Z22 !s107 C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/restador_4bit_TB.vhd|
+!i113 1
+R11
+R12
