@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSXFC6D6F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY restador_4bit
+set_global_assignment -name TOP_LEVEL_ENTITY top_restador
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 23.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "02:05:58  AUGUST 20, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.0 Lite Edition"
@@ -65,7 +65,9 @@ set_global_assignment -name EDA_TEST_BENCH_NAME restador_4bit_TB -section_id eda
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id restador_4bit_TB
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME restador_4bit_TB -section_id restador_4bit_TB
 set_global_assignment -name EDA_TEST_BENCH_FILE restador_4bit_TB.vhd -section_id restador_4bit_TB
+set_global_assignment -name VHDL_FILE top_restador.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE deco_7seg.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

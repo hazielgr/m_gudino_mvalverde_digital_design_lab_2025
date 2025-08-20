@@ -1,4 +1,23 @@
-|restador_4bit
+|top_restador
+SW[0] => restador_4bit:rest.B[0]
+SW[1] => restador_4bit:rest.B[1]
+SW[2] => restador_4bit:rest.B[2]
+SW[3] => restador_4bit:rest.B[3]
+SW[4] => restador_4bit:rest.A[0]
+SW[5] => restador_4bit:rest.A[1]
+SW[6] => restador_4bit:rest.A[2]
+SW[7] => restador_4bit:rest.A[3]
+HEX0[0] <= deco_7seg:deco.seg[0]
+HEX0[1] <= deco_7seg:deco.seg[1]
+HEX0[2] <= deco_7seg:deco.seg[2]
+HEX0[3] <= deco_7seg:deco.seg[3]
+HEX0[4] <= deco_7seg:deco.seg[4]
+HEX0[5] <= deco_7seg:deco.seg[5]
+HEX0[6] <= deco_7seg:deco.seg[6]
+Neg <= restador_4bit:rest.Bout
+
+
+|top_restador|restador_4bit:rest
 A[0] => restador_1bit:rest0.A
 A[1] => restador_1bit:rest1.A
 A[2] => restador_1bit:rest2.A
@@ -15,7 +34,7 @@ D[3] <= restador_1bit:rest3.D
 Bout <= restador_1bit:rest3.Bout
 
 
-|restador_4bit|restador_1bit:rest0
+|top_restador|restador_4bit:rest|restador_1bit:rest0
 A => D.IN0
 A => Bout.IN0
 B => D.IN1
@@ -26,7 +45,7 @@ D <= D.DB_MAX_OUTPUT_PORT_TYPE
 Bout <= Bout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|restador_4bit|restador_1bit:rest1
+|top_restador|restador_4bit:rest|restador_1bit:rest1
 A => D.IN0
 A => Bout.IN0
 B => D.IN1
@@ -37,7 +56,7 @@ D <= D.DB_MAX_OUTPUT_PORT_TYPE
 Bout <= Bout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|restador_4bit|restador_1bit:rest2
+|top_restador|restador_4bit:rest|restador_1bit:rest2
 A => D.IN0
 A => Bout.IN0
 B => D.IN1
@@ -48,7 +67,7 @@ D <= D.DB_MAX_OUTPUT_PORT_TYPE
 Bout <= Bout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|restador_4bit|restador_1bit:rest3
+|top_restador|restador_4bit:rest|restador_1bit:rest3
 A => D.IN0
 A => Bout.IN0
 B => D.IN1
@@ -57,5 +76,43 @@ Bin => D.IN1
 Bin => Bout.IN1
 D <= D.DB_MAX_OUTPUT_PORT_TYPE
 Bout <= Bout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_restador|deco_7seg:deco
+x[0] => Mux0.IN19
+x[0] => Mux1.IN19
+x[0] => Mux2.IN19
+x[0] => Mux3.IN19
+x[0] => Mux4.IN19
+x[0] => Mux5.IN19
+x[0] => Mux6.IN19
+x[1] => Mux0.IN18
+x[1] => Mux1.IN18
+x[1] => Mux2.IN18
+x[1] => Mux3.IN18
+x[1] => Mux4.IN18
+x[1] => Mux5.IN18
+x[1] => Mux6.IN18
+x[2] => Mux0.IN17
+x[2] => Mux1.IN17
+x[2] => Mux2.IN17
+x[2] => Mux3.IN17
+x[2] => Mux4.IN17
+x[2] => Mux5.IN17
+x[2] => Mux6.IN17
+x[3] => Mux0.IN16
+x[3] => Mux1.IN16
+x[3] => Mux2.IN16
+x[3] => Mux3.IN16
+x[3] => Mux4.IN16
+x[3] => Mux5.IN16
+x[3] => Mux6.IN16
+seg[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 

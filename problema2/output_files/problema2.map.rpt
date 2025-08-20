@@ -1,5 +1,5 @@
-Analysis & Elaboration report for problema2
-Wed Aug 20 02:22:18 2025
+Analysis & Synthesis report for problema2
+Wed Aug 20 09:27:03 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -7,10 +7,17 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "restador_4bit:rest"
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -34,47 +41,36 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+--------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                 ;
-+-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Aug 20 02:22:18 2025          ;
-; Quartus Prime Version         ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
-; Revision Name                 ; problema2                                      ;
-; Top-level Entity Name         ; restador_4bit                                  ;
-; Family                        ; Cyclone V                                      ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
-; Total registers               ; N/A until Partition Merge                      ;
-; Total pins                    ; N/A until Partition Merge                      ;
-; Total virtual pins            ; N/A until Partition Merge                      ;
-; Total block memory bits       ; N/A until Partition Merge                      ;
-; Total PLLs                    ; N/A until Partition Merge                      ;
-; Total DLLs                    ; N/A until Partition Merge                      ;
-+-------------------------------+------------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Aug 20 09:27:03 2025          ;
+; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                   ; problema2                                      ;
+; Top-level Entity Name           ; top_restador                                   ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 0                                              ;
+; Total pins                      ; 16                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
-; Top-level entity name                                                           ; restador_4bit      ; problema2          ;
+; Top-level entity name                                                           ; top_restador       ; problema2          ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -155,31 +151,169 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                    ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; restador_1bit.vhd                ; yes             ; User VHDL File  ; C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_1bit.vhd ;         ;
+; restador_4bit.vhd                ; yes             ; User VHDL File  ; C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd ;         ;
+; top_restador.vhd                 ; yes             ; User VHDL File  ; C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd  ;         ;
+; deco_7seg.vhd                    ; yes             ; User VHDL File  ; C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/deco_7seg.vhd     ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimate of Logic utilization (ALMs needed) ; 10     ;
+;                                             ;        ;
+; Combinational ALUT usage for logic          ; 15     ;
+;     -- 7 input functions                    ; 0      ;
+;     -- 6 input functions                    ; 4      ;
+;     -- 5 input functions                    ; 1      ;
+;     -- 4 input functions                    ; 8      ;
+;     -- <=3 input functions                  ; 2      ;
+;                                             ;        ;
+; Dedicated logic registers                   ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 16     ;
+;                                             ;        ;
+; Total DSP Blocks                            ; 0      ;
+;                                             ;        ;
+; Maximum fan-out node                        ; Add0~0 ;
+; Maximum fan-out                             ; 10     ;
+; Total fan-out                               ; 90     ;
+; Average fan-out                             ; 1.91   ;
++---------------------------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                        ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                  ; Entity Name   ; Library Name ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+---------------+--------------+
+; |top_restador               ; 15 (6)              ; 0 (0)                     ; 0                 ; 0          ; 16   ; 0            ; |top_restador                                        ; top_restador  ; work         ;
+;    |deco_7seg:deco|         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_restador|deco_7seg:deco                         ; deco_7seg     ; work         ;
+;    |restador_4bit:rest|     ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_restador|restador_4bit:rest                     ; restador_4bit ; work         ;
+;       |restador_1bit:rest2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_restador|restador_4bit:rest|restador_1bit:rest2 ; restador_1bit ; work         ;
+;       |restador_1bit:rest3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_restador|restador_4bit:rest|restador_1bit:rest3 ; restador_1bit ; work         ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "restador_4bit:rest" ;
++------+-------+----------+----------------------+
+; Port ; Type  ; Severity ; Details              ;
++------+-------+----------+----------------------+
+; bin  ; Input ; Info     ; Stuck at GND         ;
++------+-------+----------+----------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 16                          ;
+;     normal            ; 16                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 8                           ;
+;         5 data inputs ; 1                           ;
+;         6 data inputs ; 4                           ;
+; boundary_port         ; 16                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 3.58                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Wed Aug 20 02:22:12 2025
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off problema2 -c problema2 --analysis_and_elaboration
+    Info: Processing started: Wed Aug 20 09:26:52 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off problema2 -c problema2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file restador_1bit.vhd
-    Info (12022): Found design unit 1: restador_1bit-behavior File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/restador_1bit.vhd Line: 12
-    Info (12023): Found entity 1: restador_1bit File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/restador_1bit.vhd Line: 4
+    Info (12022): Found design unit 1: restador_1bit-behavior File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_1bit.vhd Line: 12
+    Info (12023): Found entity 1: restador_1bit File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_1bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file restador_4bit.vhd
-    Info (12022): Found design unit 1: restador_4bit-struct File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/restador_4bit.vhd Line: 14
-    Info (12023): Found entity 1: restador_4bit File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/restador_4bit.vhd Line: 4
+    Info (12022): Found design unit 1: restador_4bit-struct File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd Line: 14
+    Info (12023): Found entity 1: restador_4bit File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file restador_4bit_tb.vhd
-    Info (12022): Found design unit 1: restador_4bit_TB-behavior File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/restador_4bit_TB.vhd Line: 7
-    Info (12023): Found entity 1: restador_4bit_TB File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/restador_4bit_TB.vhd Line: 4
-Info (12127): Elaborating entity "restador_4bit" for the top level hierarchy
-Info (12128): Elaborating entity "restador_1bit" for hierarchy "restador_1bit:rest0" File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/restador_4bit.vhd Line: 28
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4863 megabytes
-    Info: Processing ended: Wed Aug 20 02:22:18 2025
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:16
+    Info (12022): Found design unit 1: restador_4bit_TB-behavior File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit_TB.vhd Line: 7
+    Info (12023): Found entity 1: restador_4bit_TB File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit_TB.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file top_restador.vhd
+    Info (12022): Found design unit 1: top_restador-Behavioral File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd Line: 12
+    Info (12023): Found entity 1: top_restador File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file deco_7seg.vhd
+    Info (12022): Found design unit 1: deco_7seg-behavior File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/deco_7seg.vhd Line: 10
+    Info (12023): Found entity 1: deco_7seg File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/deco_7seg.vhd Line: 5
+Info (12127): Elaborating entity "top_restador" for the top level hierarchy
+Warning (10540): VHDL Signal Declaration warning at top_restador.vhd(29): used explicit default value for signal "Bin" because signal was never assigned a value File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd Line: 29
+Info (12128): Elaborating entity "restador_4bit" for hierarchy "restador_4bit:rest" File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd Line: 38
+Info (12128): Elaborating entity "restador_1bit" for hierarchy "restador_4bit:rest|restador_1bit:rest0" File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd Line: 28
+Info (12128): Elaborating entity "deco_7seg" for hierarchy "deco_7seg:deco" File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd Line: 57
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 31 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 15 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4931 megabytes
+    Info: Processing ended: Wed Aug 20 09:27:03 2025
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:31
 
 
