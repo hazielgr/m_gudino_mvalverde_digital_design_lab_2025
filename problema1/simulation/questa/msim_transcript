@@ -1,0 +1,97 @@
+# Reading pref.tcl
+# do Ejercicio_1_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Lab_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Lab_1/bin_to_gray.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:32:03 on Aug 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Lab_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Lab_1/bin_to_gray.sv 
+# -- Compiling module bin2gray
+# 
+# Top level modules:
+# 	bin2gray
+# End time: 20:32:03 on Aug 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Lab_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Lab_1/bin_to_dec2digits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:32:04 on Aug 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Lab_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Lab_1/bin_to_dec2digits.sv 
+# -- Compiling module bin_to_dec2digits
+# 
+# Top level modules:
+# 	bin_to_dec2digits
+# End time: 20:32:04 on Aug 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Lab_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Lab_1/seven_seg_decoder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:32:04 on Aug 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Lab_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Lab_1/seven_seg_decoder.sv 
+# -- Compiling module seven_seg_decoder
+# 
+# Top level modules:
+# 	seven_seg_decoder
+# End time: 20:32:04 on Aug 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Lab_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Lab_1/top_lab1_ej1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:32:04 on Aug 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Lab_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Lab_1/top_lab1_ej1.sv 
+# -- Compiling module top_lab1_ej1
+# 
+# Top level modules:
+# 	top_lab1_ej1
+# End time: 20:32:04 on Aug 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Lab_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Lab_1/bin_to_gray_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:32:05 on Aug 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Lab_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Lab_1/bin_to_gray_tb.sv 
+# -- Compiling module bin_to_gray_tb
+# 
+# Top level modules:
+# 	bin_to_gray_tb
+# End time: 20:32:05 on Aug 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  bin_to_gray_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" bin_to_gray_tb 
+# Start time: 20:32:05 on Aug 19,2025
+# Loading sv_std.std
+# Loading work.bin_to_gray_tb
+# Loading work.bin2gray
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# BIN  | GRAY (DUT) | GRAY esperado | OK?
+# --------------------------------------
+# 0000   |    0000     |     0000       | OK
+# 0001   |    0001     |     0001       | OK
+# 0010   |    0011     |     0011       | OK
+# 0011   |    0010     |     0010       | OK
+# 0100   |    0110     |     0110       | OK
+# 0101   |    0111     |     0111       | OK
+# 0110   |    0101     |     0101       | OK
+# 0111   |    0100     |     0100       | OK
+# 1000   |    1100     |     1100       | OK
+# 1001   |    1101     |     1101       | OK
+# 1010   |    1111     |     1111       | OK
+# 1011   |    1110     |     1110       | OK
+# 1100   |    1010     |     1010       | OK
+# 1101   |    1011     |     1011       | OK
+# 1110   |    1001     |     1001       | OK
+# 1111   |    1000     |     1000       | OK
+# --------------------------------------
+# TOTAL: PASS=16  FAIL=0
