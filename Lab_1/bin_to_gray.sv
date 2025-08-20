@@ -1,6 +1,4 @@
-// -------------------------------------------
-// bin2gray.sv  —  Conversor Binario (4 bits) → Gray (4 bits)
-// -------------------------------------------
+
 module bin2gray (
     input  logic [3:0] B,   // B3 B2 B1 B0
     output logic [3:0] G    // G3 G2 G1 G0

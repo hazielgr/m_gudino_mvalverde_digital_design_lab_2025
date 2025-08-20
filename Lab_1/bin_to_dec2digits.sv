@@ -1,13 +1,11 @@
-// ---------------------------------------------------------------
-// bin_to_dec2digits.sv  —  0..15 (bin) → decenas/unidades decimales
-// Sin usar 'case' gigante para BCD. Lógica simple aritmética/booleana.
-// ---------------------------------------------------------------
+
+
 module bin_to_dec2digits (
-    input  logic [3:0] bin,      // valor 0..15
-    output logic [3:0] tens,     // 0..1
-    output logic [3:0] ones      // 0..9
+    input  logic [3:0] bin,      
+    output logic [3:0] tens,     
+    output logic [3:0] ones      
 );
-    logic        ge10;           // bin >= 10 ?
+    logic        ge10;           
     logic [3:0]  base10;
 
     always_comb begin
@@ -17,6 +15,6 @@ module bin_to_dec2digits (
 
         
         base10 = ge10 ? 4'd10 : 4'd0;
-        ones   = bin - base10;   // 0..9
+        ones   = bin - base10;   
     end
 endmodule
