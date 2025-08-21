@@ -7,14 +7,14 @@ SW[4] => restador_4bit:rest.A[0]
 SW[5] => restador_4bit:rest.A[1]
 SW[6] => restador_4bit:rest.A[2]
 SW[7] => restador_4bit:rest.A[3]
-HEX0[0] <= deco_7seg:deco.seg[0]
-HEX0[1] <= deco_7seg:deco.seg[1]
-HEX0[2] <= deco_7seg:deco.seg[2]
-HEX0[3] <= deco_7seg:deco.seg[3]
-HEX0[4] <= deco_7seg:deco.seg[4]
-HEX0[5] <= deco_7seg:deco.seg[5]
-HEX0[6] <= deco_7seg:deco.seg[6]
-Neg <= restador_4bit:rest.Bout
+HEX0[0] << deco_7seg:deco.seg[0]
+HEX0[1] << deco_7seg:deco.seg[1]
+HEX0[2] << deco_7seg:deco.seg[2]
+HEX0[3] << deco_7seg:deco.seg[3]
+HEX0[4] << deco_7seg:deco.seg[4]
+HEX0[5] << deco_7seg:deco.seg[5]
+HEX0[6] << deco_7seg:deco.seg[6]
+Neg << restador_4bit:rest.Bout
 
 
 |top_restador|restador_4bit:rest

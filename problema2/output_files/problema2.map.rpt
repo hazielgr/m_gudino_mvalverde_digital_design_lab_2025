@@ -1,5 +1,5 @@
 Analysis & Synthesis report for problema2
-Wed Aug 20 09:27:03 2025
+Thu Aug 21 10:43:46 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -44,7 +44,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Aug 20 09:27:03 2025          ;
+; Analysis & Synthesis Status     ; Successful - Thu Aug 21 10:43:46 2025          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; problema2                                      ;
 ; Top-level Entity Name           ; top_restador                                   ;
@@ -156,8 +156,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -167,16 +167,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                    ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
-; restador_1bit.vhd                ; yes             ; User VHDL File  ; C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_1bit.vhd ;         ;
-; restador_4bit.vhd                ; yes             ; User VHDL File  ; C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd ;         ;
-; top_restador.vhd                 ; yes             ; User VHDL File  ; C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd  ;         ;
-; deco_7seg.vhd                    ; yes             ; User VHDL File  ; C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/deco_7seg.vhd     ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                     ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                              ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; restador_1bit.vhd                ; yes             ; User VHDL File  ; C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_1bit.vhd ;         ;
+; restador_4bit.vhd                ; yes             ; User VHDL File  ; C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd ;         ;
+; top_restador.vhd                 ; yes             ; User VHDL File  ; C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd  ;         ;
+; deco_7seg.vhd                    ; yes             ; User VHDL File  ; C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/deco_7seg.vhd     ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------+
@@ -279,30 +279,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Wed Aug 20 09:26:52 2025
+    Info: Processing started: Thu Aug 21 10:43:35 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off problema2 -c problema2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file restador_1bit.vhd
-    Info (12022): Found design unit 1: restador_1bit-behavior File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_1bit.vhd Line: 12
-    Info (12023): Found entity 1: restador_1bit File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_1bit.vhd Line: 4
+    Info (12022): Found design unit 1: restador_1bit-behavior File: C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_1bit.vhd Line: 12
+    Info (12023): Found entity 1: restador_1bit File: C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_1bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file restador_4bit.vhd
-    Info (12022): Found design unit 1: restador_4bit-struct File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd Line: 14
-    Info (12023): Found entity 1: restador_4bit File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd Line: 4
+    Info (12022): Found design unit 1: restador_4bit-struct File: C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd Line: 14
+    Info (12023): Found entity 1: restador_4bit File: C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file restador_4bit_tb.vhd
-    Info (12022): Found design unit 1: restador_4bit_TB-behavior File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit_TB.vhd Line: 7
-    Info (12023): Found entity 1: restador_4bit_TB File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit_TB.vhd Line: 4
+    Info (12022): Found design unit 1: restador_4bit_TB-behavior File: C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit_TB.vhd Line: 7
+    Info (12023): Found entity 1: restador_4bit_TB File: C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit_TB.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file top_restador.vhd
-    Info (12022): Found design unit 1: top_restador-Behavioral File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd Line: 12
-    Info (12023): Found entity 1: top_restador File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd Line: 5
+    Info (12022): Found design unit 1: top_restador-Behavioral File: C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd Line: 12
+    Info (12023): Found entity 1: top_restador File: C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file deco_7seg.vhd
-    Info (12022): Found design unit 1: deco_7seg-behavior File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/deco_7seg.vhd Line: 10
-    Info (12023): Found entity 1: deco_7seg File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/deco_7seg.vhd Line: 5
+    Info (12022): Found design unit 1: deco_7seg-behavior File: C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/deco_7seg.vhd Line: 10
+    Info (12023): Found entity 1: deco_7seg File: C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/deco_7seg.vhd Line: 5
 Info (12127): Elaborating entity "top_restador" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at top_restador.vhd(29): used explicit default value for signal "Bin" because signal was never assigned a value File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd Line: 29
-Info (12128): Elaborating entity "restador_4bit" for hierarchy "restador_4bit:rest" File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd Line: 38
-Info (12128): Elaborating entity "restador_1bit" for hierarchy "restador_4bit:rest|restador_1bit:rest0" File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd Line: 28
-Info (12128): Elaborating entity "deco_7seg" for hierarchy "deco_7seg:deco" File: C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd Line: 57
+Warning (10540): VHDL Signal Declaration warning at top_restador.vhd(29): used explicit default value for signal "Bin" because signal was never assigned a value File: C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd Line: 29
+Info (12128): Elaborating entity "restador_4bit" for hierarchy "restador_4bit:rest" File: C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd Line: 38
+Info (12128): Elaborating entity "restador_1bit" for hierarchy "restador_4bit:rest|restador_1bit:rest0" File: C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd Line: 28
+Info (12128): Elaborating entity "deco_7seg" for hierarchy "deco_7seg:deco" File: C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd Line: 57
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -311,9 +311,9 @@ Info (21057): Implemented 31 device resources after synthesis - the final resour
     Info (21059): Implemented 8 output pins
     Info (21061): Implemented 15 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4931 megabytes
-    Info: Processing ended: Wed Aug 20 09:27:03 2025
+    Info: Peak virtual memory: 4908 megabytes
+    Info: Processing ended: Thu Aug 21 10:43:46 2025
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Total CPU time (on all processors): 00:00:24
 
 
