@@ -1,0 +1,77 @@
+module top_lab1_ej3 (
+    input  logic        CLOCK_50,      // 50 MHz
+    input  logic        SW_RESET,      // 1 = reset; 0 = normal
+    input  logic        KEY_UP_N,      // botón subir (activo-bajo físico)
+    input  logic        KEY_LOAD_N,    // botón cargar (activo-bajo físico)
+    input  logic [5:0]  SW_PRESET,     // valor inicial 0..63
+    output logic [6:0]  HEX1,          // decenas
+    output logic [6:0]  HEX0           // unidades
+);
+    // Reloj y resets
+    logic clk;
+    assign clk = CLOCK_50;
+
+    // Reset asíncrono del contador (activo-bajo)
+    logic arst_n;
+    assign arst_n = ~SW_RESET;  // SW_RESET=1 fuerza reset
+
+    // Para los módulos de debouncer/one-shot usaremos reset síncrono
+    logic rst_sync_n;
+    // Aquí lo hacemos derivado del asíncrono (lo pasas por 2 FF si quieres ser purista):
+    assign rst_sync_n = arst_n;
+
+    // Botones físicos son activo-bajo → conviértelos a activo-alto (nivel)
+    logic up_level_raw   = ~KEY_UP_N;
+    logic load_level_raw = ~KEY_LOAD_N;
+
+    // Debounce de niveles
+    logic up_level_clean, load_level_clean;
+    btn_debouncer #(.CYCLES(250_000)) u_db_up (
+        .clk(clk), .rst_n(rst_sync_n),
+        .noisy_in(up_level_raw),
+        .clean_out(up_level_clean)
+    );
+
+    btn_debouncer #(.CYCLES(250_000)) u_db_load (
+        .clk(clk), .rst_n(rst_sync_n),
+        .noisy_in(load_level_raw),
+        .clean_out(load_level_clean)
+    );
+
+    // One-shot (pulso 1 ciclo)
+    logic up_pulse, load_pulse;
+    one_pulse u_pulse_up (
+        .clk(clk), .rst_n(rst_sync_n),
+        .level_in(up_level_clean),
+        .pulse_out(up_pulse)
+    );
+
+    one_pulse u_pulse_load (
+        .clk(clk), .rst_n(rst_sync_n),
+        .level_in(load_level_clean),
+        .pulse_out(load_pulse)
+    );
+
+    // Contador 6 bits
+    logic [5:0] q;
+    counter #(.N(6)) u_cnt (
+        .clk(clk),
+        .arst_n(arst_n),
+        .enable(up_pulse),        // un pulso = +1
+        .load(load_pulse),        // un pulso = cargar SW_PRESET
+        .load_value(SW_PRESET),
+        .q(q)
+    );
+
+    // Binario (0..63) → decimal (dos dígitos)
+    logic [3:0] tens, ones;
+    bin_to_dec2digits u_b2d (
+        .bin(q),
+        .tens(tens),
+        .ones(ones)
+    );
+
+    // Decodificadores 7-seg (activo-bajo)
+    seven_seg_decoder_dec u_dec0 (.d(ones), .seg(HEX0));
+    seven_seg_decoder_dec u_dec1 (.d(tens), .seg(HEX1));
+endmodule
