@@ -1,0 +1,204 @@
+# Reading pref.tcl
+# do Ejercicio_3_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/btn_debouncer.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:23:58 on Aug 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/btn_debouncer.sv 
+# -- Compiling module btn_debouncer
+# 
+# Top level modules:
+# 	btn_debouncer
+# End time: 02:23:58 on Aug 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/one_pulse.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:23:59 on Aug 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/one_pulse.sv 
+# -- Compiling module one_pulse
+# 
+# Top level modules:
+# 	one_pulse
+# End time: 02:23:59 on Aug 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/counter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:23:59 on Aug 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 02:23:59 on Aug 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/bin_to_dec2digits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:23:59 on Aug 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/bin_to_dec2digits.sv 
+# -- Compiling module bin_to_dec2digits
+# 
+# Top level modules:
+# 	bin_to_dec2digits
+# End time: 02:23:59 on Aug 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/seven_seg_decoder_dec.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:23:59 on Aug 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/seven_seg_decoder_dec.sv 
+# -- Compiling module seven_seg_decoder_dec
+# 
+# Top level modules:
+# 	seven_seg_decoder_dec
+# End time: 02:23:59 on Aug 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/top_lab1_ej3.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:23:59 on Aug 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/top_lab1_ej3.sv 
+# -- Compiling module top_lab1_ej3
+# 
+# Top level modules:
+# 	top_lab1_ej3
+# End time: 02:24:00 on Aug 22,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/counter_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:24:00 on Aug 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/counter_tb.sv 
+# -- Compiling module counter_tb
+# 
+# Top level modules:
+# 	counter_tb
+# End time: 02:24:00 on Aug 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  counter_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" counter_tb 
+# Start time: 02:24:00 on Aug 22,2025
+# Loading sv_std.std
+# Loading work.counter_tb
+# Loading work.counter
+# Loading work.bin_to_dec2digits
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: micha  Hostname: LAPTOP_MICHAEL  ProcessID: 3160
+#           Attempting to use alternate WLF file "./wlft66afmz".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft66afmz
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# [25000] N=2 AFTER RESET: q=0  (tens=0, ones=0)
+# [35000] N=4 AFTER RESET: q=0  (tens=0, ones=0)
+# [45000] N=2 LOAD: q=0  (tens=0, ones=0)
+# [55000] N=6 AFTER RESET: q=0  (tens=0, ones=0)
+# [63000] N=4 LOAD: q=0  (tens=0, ones=0)
+# [65000] N=2 LOAD: q=2  (tens=0, ones=2)
+# [85000] N=2 LOAD: q=3  (tens=0, ones=3)
+# [91000] N=4 LOAD: q=8  (tens=0, ones=8)
+# [99000] N=6 LOAD: q=0  (tens=0, ones=0)
+# [105000] N=2 CNT: q=0  (tens=0, ones=0)
+# [119000] N=4 LOAD: q=15  (tens=1, ones=5)
+# [125000] N=2 CNT: q=1  (tens=0, ones=1)
+# [143000] N=6 LOAD: q=31  (tens=3, ones=1)
+# [147000] N=4 CNT: q=0  (tens=0, ones=0)
+# [175000] N=4 CNT: q=1  (tens=0, ones=1)
+# [185000] N=2 CNT: q=0  (tens=0, ones=0)
+# [187000] N=6 LOAD: q=63  (tens=6, ones=3)
+# [203000] N=4 CNT: q=2  (tens=0, ones=2)
+# [205000] N=2 CNT: q=1  (tens=0, ones=1)
+# ==== RESUMEN N=2: PASS=16 FAIL=0 ====
+# [231000] N=6 CNT: q=0  (tens=0, ones=0)
+# [275000] N=6 CNT: q=1  (tens=0, ones=1)
+# [319000] N=6 CNT: q=2  (tens=0, ones=2)
+# [363000] N=6 CNT: q=3  (tens=0, ones=3)
+# [399000] N=4 CNT: q=9  (tens=0, ones=9)
+# [407000] N=6 CNT: q=4  (tens=0, ones=4)
+# [427000] N=4 CNT: q=10  (tens=1, ones=0)
+# [451000] N=6 CNT: q=5  (tens=0, ones=5)
+# [495000] N=6 CNT: q=6  (tens=0, ones=6)
+# [539000] N=6 CNT: q=7  (tens=0, ones=7)
+# [567000] N=4 CNT: q=15  (tens=1, ones=5)
+# [583000] N=6 CNT: q=8  (tens=0, ones=8)
+# [595000] N=4 CNT: q=0  (tens=0, ones=0)
+# [623000] N=4 CNT: q=1  (tens=0, ones=1)
+# [627000] N=6 CNT: q=9  (tens=0, ones=9)
+# [651000] N=4 CNT: q=2  (tens=0, ones=2)
+# ==== RESUMEN N=4: PASS=42 FAIL=0 ====
+# [671000] N=6 CNT: q=10  (tens=1, ones=0)
+# [715000] N=6 CNT: q=11  (tens=1, ones=1)
+# [759000] N=6 CNT: q=12  (tens=1, ones=2)
+# [803000] N=6 CNT: q=13  (tens=1, ones=3)
+# [847000] N=6 CNT: q=14  (tens=1, ones=4)
+# [891000] N=6 CNT: q=15  (tens=1, ones=5)
+# [935000] N=6 CNT: q=16  (tens=1, ones=6)
+# [979000] N=6 CNT: q=17  (tens=1, ones=7)
+# [1023000] N=6 CNT: q=18  (tens=1, ones=8)
+# [1067000] N=6 CNT: q=19  (tens=1, ones=9)
+# [1111000] N=6 CNT: q=20  (tens=2, ones=0)
+# [1155000] N=6 CNT: q=21  (tens=2, ones=1)
+# [1199000] N=6 CNT: q=22  (tens=2, ones=2)
+# [1243000] N=6 CNT: q=23  (tens=2, ones=3)
+# [1287000] N=6 CNT: q=24  (tens=2, ones=4)
+# [1331000] N=6 CNT: q=25  (tens=2, ones=5)
+# [1375000] N=6 CNT: q=26  (tens=2, ones=6)
+# [1419000] N=6 CNT: q=27  (tens=2, ones=7)
+# [1463000] N=6 CNT: q=28  (tens=2, ones=8)
+# [1507000] N=6 CNT: q=29  (tens=2, ones=9)
+# [1551000] N=6 CNT: q=30  (tens=3, ones=0)
+# [1595000] N=6 CNT: q=31  (tens=3, ones=1)
+# [1639000] N=6 CNT: q=32  (tens=3, ones=2)
+# [1683000] N=6 CNT: q=33  (tens=3, ones=3)
+# [1727000] N=6 CNT: q=34  (tens=3, ones=4)
+# [1771000] N=6 CNT: q=35  (tens=3, ones=5)
+# [1815000] N=6 CNT: q=36  (tens=3, ones=6)
+# [1859000] N=6 CNT: q=37  (tens=3, ones=7)
+# [1903000] N=6 CNT: q=38  (tens=3, ones=8)
+# [1947000] N=6 CNT: q=39  (tens=3, ones=9)
+# [1991000] N=6 CNT: q=40  (tens=4, ones=0)
+# [2035000] N=6 CNT: q=41  (tens=4, ones=1)
+# [2079000] N=6 CNT: q=42  (tens=4, ones=2)
+# [2123000] N=6 CNT: q=43  (tens=4, ones=3)
+# [2167000] N=6 CNT: q=44  (tens=4, ones=4)
+# [2211000] N=6 CNT: q=45  (tens=4, ones=5)
+# [2255000] N=6 CNT: q=46  (tens=4, ones=6)
+# [2299000] N=6 CNT: q=47  (tens=4, ones=7)
+# [2343000] N=6 CNT: q=48  (tens=4, ones=8)
+# [2387000] N=6 CNT: q=49  (tens=4, ones=9)
+# [2431000] N=6 CNT: q=50  (tens=5, ones=0)
+# [2475000] N=6 CNT: q=51  (tens=5, ones=1)
+# [2519000] N=6 CNT: q=52  (tens=5, ones=2)
+# [2563000] N=6 CNT: q=53  (tens=5, ones=3)
+# [2607000] N=6 CNT: q=54  (tens=5, ones=4)
+# [2651000] N=6 CNT: q=55  (tens=5, ones=5)
+# [2695000] N=6 CNT: q=56  (tens=5, ones=6)
+# [2739000] N=6 CNT: q=57  (tens=5, ones=7)
+# [2783000] N=6 CNT: q=58  (tens=5, ones=8)
+# [2827000] N=6 CNT: q=59  (tens=5, ones=9)
+# [2871000] N=6 CNT: q=60  (tens=6, ones=0)
+# [2915000] N=6 CNT: q=61  (tens=6, ones=1)
+# [2959000] N=6 CNT: q=62  (tens=6, ones=2)
+# [3003000] N=6 CNT: q=63  (tens=6, ones=3)
+# [3047000] N=6 CNT: q=0  (tens=0, ones=0)
+# [3091000] N=6 CNT: q=1  (tens=0, ones=1)
+# [3135000] N=6 CNT: q=2  (tens=0, ones=2)
+# ==== RESUMEN N=6: PASS=138 FAIL=0 ====
+# ** Note: $finish    : C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/counter_tb.sv(233)
+#    Time: 3135 ns  Iteration: 1  Instance: /counter_tb
+# 1
+# Break in NamedBeginStat TEST_N6 at C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/counter_tb.sv line 233
+# End time: 02:44:49 on Aug 22,2025, Elapsed time: 0:20:49
+# Errors: 0, Warnings: 2

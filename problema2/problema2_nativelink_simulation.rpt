@@ -7,7 +7,7 @@ Sim Mode              :  RTL
 Family                :  cyclonev
 Quartus root          :  c:/intelfpga_lite/23.1std/quartus/bin64/
 Quartus sim root      :  c:/intelfpga_lite/23.1std/quartus/eda/sim_lib
-Simulation Tool       :  questasim
+Simulation Tool       :  questa intel fpga
 Simulation Language   :  vhdl
 Version               :  93
 Simulation Mode       :  GUI
@@ -17,7 +17,8 @@ Sim dir               :  simulation\questa
 
 =======================================================
 
-Info: Starting NativeLink simulation with Questasim software
+Info: Starting NativeLink simulation with Questa Intel FPGA software
 Sourced NativeLink script c:/intelfpga_lite/23.1std/quartus/common/tcl/internal/nativelink/modelsim.tcl
-Info: Spawning QuestaSim Simulation software 
+Warning: File problema2_run_msim_rtl_vhdl.do already exists - backing up current file as problema2_run_msim_rtl_vhdl.do.bak
+Info: Spawning Questa Intel FPGA Simulation software 
 Info: NativeLink simulation flow was successful

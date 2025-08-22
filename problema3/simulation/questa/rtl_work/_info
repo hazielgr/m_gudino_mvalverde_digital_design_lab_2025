@@ -1,0 +1,193 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/simulation/questa
+vbin_to_dec2digits
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1755851039
+!i10b 1
+!s100 nlP_=icBAnHa4R6W2SBFg3
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IU@S><D=`6MLQ4H:QTKbDW0
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1755798209
+8C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/bin_to_dec2digits.sv
+FC:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/bin_to_dec2digits.sv
+!i122 3
+L0 1 10
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1755851039.000000
+!s107 C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/bin_to_dec2digits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3|C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/bin_to_dec2digits.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work {+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3}
+Z9 tCvgOpt 0
+vbtn_debouncer
+R1
+!s110 1755851038
+!i10b 1
+!s100 :hfX2UK7J9]23eG5HV2]l0
+R3
+Ie?97`XioGk=;dShh0j7;o0
+R4
+S1
+R0
+w1755798097
+8C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/btn_debouncer.sv
+FC:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/btn_debouncer.sv
+!i122 0
+L0 1 42
+R5
+r1
+!s85 0
+31
+!s108 1755851038.000000
+!s107 C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/btn_debouncer.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3|C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/btn_debouncer.sv|
+!i113 1
+R7
+R8
+R9
+vcounter
+R1
+R2
+!i10b 1
+!s100 Ak;:`_Ao13eiEllom0gPQ2
+R3
+I[D6C2I<ZOaRR0O>4H6aV62
+R4
+S1
+R0
+w1755798170
+8C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/counter.sv
+FC:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/counter.sv
+!i122 2
+L0 1 16
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/counter.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3|C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/counter.sv|
+!i113 1
+R7
+R8
+R9
+vcounter_tb
+R1
+Z10 !s110 1755851040
+!i10b 1
+!s100 <JVZ`CYTEmm>ZA4TcNL2c3
+R3
+IYMokcPV6No;@AIm=XOdl`3
+R4
+S1
+R0
+w1755850990
+8C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/counter_tb.sv
+FC:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/counter_tb.sv
+!i122 6
+L0 3 234
+R5
+r1
+!s85 0
+31
+!s108 1755851040.000000
+!s107 C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/counter_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3|C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/counter_tb.sv|
+!i113 1
+R7
+R8
+R9
+vone_pulse
+R1
+R2
+!i10b 1
+!s100 :FT=Rj7C3;SmO8L1fZ1PO2
+R3
+IAnAhQOI=7dL:m1^2BDGV@2
+R4
+S1
+R0
+w1755798140
+8C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/one_pulse.sv
+FC:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/one_pulse.sv
+!i122 1
+L0 1 17
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/one_pulse.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3|C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/one_pulse.sv|
+!i113 1
+R7
+R8
+R9
+vseven_seg_decoder_dec
+R1
+R2
+!i10b 1
+!s100 LWlE^E`hf3R`amhlO5:@E1
+R3
+I2C@SQ?T8iGQ4i028Nn^P03
+R4
+S1
+R0
+w1755798284
+8C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/seven_seg_decoder_dec.sv
+FC:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/seven_seg_decoder_dec.sv
+!i122 4
+L0 1 20
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/seven_seg_decoder_dec.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3|C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/seven_seg_decoder_dec.sv|
+!i113 1
+R7
+R8
+R9
+vtop_lab1_ej3
+R1
+R10
+!i10b 1
+!s100 W3nz_@XDO>G;[Y^Tnl>cG3
+R3
+IK>`13:OlZIP7QUGgAG1lb1
+R4
+S1
+R0
+w1755798933
+8C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/top_lab1_ej3.sv
+FC:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/top_lab1_ej3.sv
+!i122 5
+L0 1 104
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/top_lab1_ej3.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3|C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/top_lab1_ej3.sv|
+!i113 1
+R7
+R8
+R9
