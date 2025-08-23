@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Ejercicio_3
-Fri Aug 22 02:23:47 2025
+Fri Aug 22 19:57:04 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -40,7 +40,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Fri Aug 22 02:23:47 2025          ;
+; Analysis & Elaboration Status ; Successful - Fri Aug 22 19:57:04 2025          ;
 ; Quartus Prime Version         ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                 ; Ejercicio_3                                    ;
 ; Top-level Entity Name         ; top_lab1_ej3                                   ;
@@ -194,7 +194,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Fri Aug 22 02:23:40 2025
+    Info: Processing started: Fri Aug 22 19:56:57 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Ejercicio_3 -c Ejercicio_3 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -221,9 +221,9 @@ Warning (10230): Verilog HDL assignment warning at bin_to_dec2digits.sv(8): trun
 Warning (10230): Verilog HDL assignment warning at bin_to_dec2digits.sv(9): truncated value with size 32 to match size of target (4) File: C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/bin_to_dec2digits.sv Line: 9
 Info (12128): Elaborating entity "seven_seg_decoder_dec" for hierarchy "seven_seg_decoder_dec:u_dec0" File: C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/top_lab1_ej3.sv Line: 97
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4780 megabytes
-    Info: Processing ended: Fri Aug 22 02:23:47 2025
+    Info: Peak virtual memory: 4781 megabytes
+    Info: Processing ended: Fri Aug 22 19:57:04 2025
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Total CPU time (on all processors): 00:00:17
 
 

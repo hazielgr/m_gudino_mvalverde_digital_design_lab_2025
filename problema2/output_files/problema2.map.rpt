@@ -1,5 +1,5 @@
 Analysis & Elaboration report for problema2
-Thu Aug 21 12:23:42 2025
+Fri Aug 22 09:58:16 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Thu Aug 21 12:23:42 2025          ;
+; Analysis & Elaboration Status ; Successful - Fri Aug 22 09:58:16 2025          ;
 ; Quartus Prime Version         ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                 ; problema2                                      ;
 ; Top-level Entity Name         ; top_restador                                   ;
@@ -171,7 +171,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Thu Aug 21 12:23:33 2025
+    Info: Processing started: Fri Aug 22 09:58:08 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off problema2 -c problema2 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -197,8 +197,8 @@ Info (12128): Elaborating entity "restador_1bit" for hierarchy "restador_4bit:re
 Info (12128): Elaborating entity "deco_7seg" for hierarchy "deco_7seg:deco" File: C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd Line: 57
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 4860 megabytes
-    Info: Processing ended: Thu Aug 21 12:23:42 2025
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Processing ended: Fri Aug 22 09:58:16 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:19
 
 

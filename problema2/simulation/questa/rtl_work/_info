@@ -23,9 +23,9 @@ V6b4aGLz;PNzoV396=o4MA3
 !s100 g54I@6AISO<4INcS1a4Cl0
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1755800681
+Z7 !s110 1755878305
 !i10b 1
-Z8 !s108 1755800681.000000
+Z8 !s108 1755878305.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/deco_7seg.vhd|
 Z10 !s107 C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/deco_7seg.vhd|
 !i113 1
@@ -64,11 +64,11 @@ V?>JLl@nMdY06[ATobXOOH2
 !s100 enPAzkf3M_7Lj[[LB=d:n0
 R6
 31
-R7
+Z15 !s110 1755878304
 !i10b 1
-Z15 !s108 1755800680.000000
-Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_1bit.vhd|
-Z17 !s107 C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_1bit.vhd|
+Z16 !s108 1755878304.000000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_1bit.vhd|
+Z18 !s107 C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_1bit.vhd|
 !i113 1
 R11
 R12
@@ -83,11 +83,11 @@ VJiHTDheN^1jXZE=kd5F3[1
 !s100 =gX54MHnWzg@ZfYK]DM[k2
 R6
 31
-R7
-!i10b 1
 R15
+!i10b 1
 R16
 R17
+R18
 !i113 1
 R11
 R12
@@ -97,19 +97,19 @@ R2
 R3
 !i122 1
 R0
-Z18 8C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd
-Z19 FC:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd
+Z19 8C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd
+Z20 FC:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd
 l0
 L4 1
 V8O_DIGdddemNHN:]ojA>J0
 !s100 <:=C`Z0<`8NXz8E3j1J1f3
 R6
 31
-R7
+R15
 !i10b 1
-R8
-Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd|
-Z21 !s107 C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd|
+R16
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd|
+Z22 !s107 C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd|
 !i113 1
 R11
 R12
@@ -124,11 +124,11 @@ VJJHgi5fAMz=;lH7V3XE:L2
 !s100 _WQ6H0@hJczB^N7gPGhH]2
 R6
 31
-R7
+R15
 !i10b 1
-R8
-R20
+R16
 R21
+R22
 !i113 1
 R11
 R12
@@ -138,8 +138,8 @@ R2
 R3
 !i122 4
 R0
-Z22 8C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit_TB.vhd
-Z23 FC:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit_TB.vhd
+Z23 8C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit_TB.vhd
+Z24 FC:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit_TB.vhd
 l0
 L4 1
 VDLYIk>bUeo;n;KIc<ba<P2
@@ -149,7 +149,7 @@ R6
 R7
 !i10b 1
 R8
-Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit_TB.vhd|
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit_TB.vhd|
 !s107 C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit_TB.vhd|
 !i113 1
 R11
@@ -168,20 +168,20 @@ R6
 R7
 !i10b 1
 R8
-R24
-Z25 !s107 C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit_TB.vhd|
+R25
+Z26 !s107 C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit_TB.vhd|
 !i113 1
 R11
 R12
 Etop_restador
 R1
-Z26 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z27 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 R2
 R3
 !i122 2
 R0
-Z27 8C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd
-Z28 FC:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd
+Z28 8C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd
+Z29 FC:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd
 l0
 L5 1
 VVomILGoXRM^A7M@4PG[Nj2
@@ -190,14 +190,14 @@ R6
 31
 R7
 !i10b 1
-R8
-Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd|
-Z30 !s107 C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd|
+R16
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd|
+Z31 !s107 C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd|
 !i113 1
 R11
 R12
 Abehavioral
-R26
+R27
 R2
 R3
 DEx4 work 12 top_restador 0 22 VomILGoXRM^A7M@4PG[Nj2
@@ -210,9 +210,9 @@ R6
 31
 R7
 !i10b 1
-R8
-R29
+R16
 R30
+R31
 !i113 1
 R11
 R12

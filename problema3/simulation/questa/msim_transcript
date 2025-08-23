@@ -12,79 +12,79 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/btn_debouncer.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:23:58 on Aug 22,2025
+# Start time: 19:57:12 on Aug 22,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/btn_debouncer.sv 
 # -- Compiling module btn_debouncer
 # 
 # Top level modules:
 # 	btn_debouncer
-# End time: 02:23:58 on Aug 22,2025, Elapsed time: 0:00:00
+# End time: 19:57:12 on Aug 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/one_pulse.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:23:59 on Aug 22,2025
+# Start time: 19:57:12 on Aug 22,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/one_pulse.sv 
 # -- Compiling module one_pulse
 # 
 # Top level modules:
 # 	one_pulse
-# End time: 02:23:59 on Aug 22,2025, Elapsed time: 0:00:00
+# End time: 19:57:12 on Aug 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/counter.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:23:59 on Aug 22,2025
+# Start time: 19:57:12 on Aug 22,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/counter.sv 
 # -- Compiling module counter
 # 
 # Top level modules:
 # 	counter
-# End time: 02:23:59 on Aug 22,2025, Elapsed time: 0:00:00
+# End time: 19:57:12 on Aug 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/bin_to_dec2digits.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:23:59 on Aug 22,2025
+# Start time: 19:57:13 on Aug 22,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/bin_to_dec2digits.sv 
 # -- Compiling module bin_to_dec2digits
 # 
 # Top level modules:
 # 	bin_to_dec2digits
-# End time: 02:23:59 on Aug 22,2025, Elapsed time: 0:00:00
+# End time: 19:57:13 on Aug 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/seven_seg_decoder_dec.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:23:59 on Aug 22,2025
+# Start time: 19:57:13 on Aug 22,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/seven_seg_decoder_dec.sv 
 # -- Compiling module seven_seg_decoder_dec
 # 
 # Top level modules:
 # 	seven_seg_decoder_dec
-# End time: 02:23:59 on Aug 22,2025, Elapsed time: 0:00:00
+# End time: 19:57:13 on Aug 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/top_lab1_ej3.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:23:59 on Aug 22,2025
+# Start time: 19:57:13 on Aug 22,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/top_lab1_ej3.sv 
 # -- Compiling module top_lab1_ej3
 # 
 # Top level modules:
 # 	top_lab1_ej3
-# End time: 02:24:00 on Aug 22,2025, Elapsed time: 0:00:01
+# End time: 19:57:13 on Aug 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/counter_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:24:00 on Aug 22,2025
+# Start time: 19:57:13 on Aug 22,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/counter_tb.sv 
 # -- Compiling module counter_tb
 # 
 # Top level modules:
 # 	counter_tb
-# End time: 02:24:00 on Aug 22,2025, Elapsed time: 0:00:00
+# End time: 19:57:13 on Aug 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  counter_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" counter_tb 
-# Start time: 02:24:00 on Aug 22,2025
+# Start time: 19:57:13 on Aug 22,2025
 # Loading sv_std.std
 # Loading work.counter_tb
 # Loading work.counter
@@ -93,9 +93,9 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: micha  Hostname: LAPTOP_MICHAEL  ProcessID: 3160
-#           Attempting to use alternate WLF file "./wlft66afmz".
+#           Attempting to use alternate WLF file "./wlftbhebew".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft66afmz
+#           Using alternate file: ./wlftbhebew
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -200,5 +200,5 @@
 #    Time: 3135 ns  Iteration: 1  Instance: /counter_tb
 # 1
 # Break in NamedBeginStat TEST_N6 at C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema3/counter_tb.sv line 233
-# End time: 02:44:49 on Aug 22,2025, Elapsed time: 0:20:49
+# End time: 20:05:53 on Aug 22,2025, Elapsed time: 0:08:40
 # Errors: 0, Warnings: 2

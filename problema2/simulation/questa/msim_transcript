@@ -12,29 +12,29 @@
 # 
 # vcom -93 -work work {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_1bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:24:40 on Aug 21,2025
+# Start time: 09:58:24 on Aug 22,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_1bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity restador_1bit
 # -- Compiling architecture behavior of restador_1bit
-# End time: 12:24:41 on Aug 21,2025, Elapsed time: 0:00:01
+# End time: 09:58:24 on Aug 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:24:41 on Aug 21,2025
+# Start time: 09:58:24 on Aug 22,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity restador_4bit
 # -- Compiling architecture struct of restador_4bit
-# End time: 12:24:41 on Aug 21,2025, Elapsed time: 0:00:00
+# End time: 09:58:24 on Aug 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:24:41 on Aug 21,2025
+# Start time: 09:58:24 on Aug 22,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/top_restador.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -42,35 +42,35 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity top_restador
 # -- Compiling architecture Behavioral of top_restador
-# End time: 12:24:41 on Aug 21,2025, Elapsed time: 0:00:00
+# End time: 09:58:25 on Aug 22,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/deco_7seg.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:24:41 on Aug 21,2025
+# Start time: 09:58:25 on Aug 22,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/deco_7seg.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity deco_7seg
 # -- Compiling architecture behavior of deco_7seg
-# End time: 12:24:41 on Aug 21,2025, Elapsed time: 0:00:00
+# End time: 09:58:25 on Aug 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit_TB.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:24:41 on Aug 21,2025
+# Start time: 09:58:25 on Aug 22,2025
 # vcom -reportprogress 300 -93 -work work C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema2/restador_4bit_TB.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity restador_4bit_TB
 # -- Compiling architecture behavior of restador_4bit_TB
-# End time: 12:24:41 on Aug 21,2025, Elapsed time: 0:00:00
+# End time: 09:58:25 on Aug 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs="+acc"  restador_4bit_TB
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs=""+acc"" restador_4bit_TB 
-# Start time: 12:24:41 on Aug 21,2025
+# Start time: 09:58:25 on Aug 22,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -84,5 +84,5 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# End time: 12:25:37 on Aug 21,2025, Elapsed time: 0:00:56
+# End time: 10:01:19 on Aug 22,2025, Elapsed time: 0:02:54
 # Errors: 0, Warnings: 0

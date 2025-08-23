@@ -12,59 +12,59 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema1/bin_to_gray.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:21:51 on Aug 21,2025
+# Start time: 17:27:27 on Aug 22,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema1/bin_to_gray.sv 
 # -- Compiling module bin2gray
 # 
 # Top level modules:
 # 	bin2gray
-# End time: 12:21:51 on Aug 21,2025, Elapsed time: 0:00:00
+# End time: 17:27:27 on Aug 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema1/bin_to_dec2digits.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:21:52 on Aug 21,2025
+# Start time: 17:27:27 on Aug 22,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema1/bin_to_dec2digits.sv 
 # -- Compiling module bin_to_dec2digits
 # 
 # Top level modules:
 # 	bin_to_dec2digits
-# End time: 12:21:52 on Aug 21,2025, Elapsed time: 0:00:00
+# End time: 17:27:27 on Aug 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema1/seven_seg_decoder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:21:52 on Aug 21,2025
+# Start time: 17:27:27 on Aug 22,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema1/seven_seg_decoder.sv 
 # -- Compiling module seven_seg_decoder
 # 
 # Top level modules:
 # 	seven_seg_decoder
-# End time: 12:21:52 on Aug 21,2025, Elapsed time: 0:00:00
+# End time: 17:27:28 on Aug 22,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema1/top_lab1_ej1.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:21:52 on Aug 21,2025
+# Start time: 17:27:28 on Aug 22,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema1/top_lab1_ej1.sv 
 # -- Compiling module top_lab1_ej1
 # 
 # Top level modules:
 # 	top_lab1_ej1
-# End time: 12:21:52 on Aug 21,2025, Elapsed time: 0:00:00
+# End time: 17:27:28 on Aug 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema1/bin_to_gray_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 12:21:53 on Aug 21,2025
+# Start time: 17:27:28 on Aug 22,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/problema1/bin_to_gray_tb.sv 
 # -- Compiling module bin_to_gray_tb
 # 
 # Top level modules:
 # 	bin_to_gray_tb
-# End time: 12:21:53 on Aug 21,2025, Elapsed time: 0:00:00
+# End time: 17:27:28 on Aug 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  bin_to_gray_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" bin_to_gray_tb 
-# Start time: 12:21:53 on Aug 21,2025
+# Start time: 17:27:28 on Aug 22,2025
 # Loading sv_std.std
 # Loading work.bin_to_gray_tb
 # Loading work.bin2gray
@@ -95,5 +95,5 @@
 # 1111   |    1000     |     1000       | OK
 # --------------------------------------
 # TOTAL: PASS=16  FAIL=0
-# End time: 12:22:58 on Aug 21,2025, Elapsed time: 0:01:05
+# End time: 18:29:47 on Aug 22,2025, Elapsed time: 1:02:19
 # Errors: 0, Warnings: 0

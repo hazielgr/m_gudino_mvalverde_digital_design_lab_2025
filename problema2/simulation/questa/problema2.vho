@@ -17,14 +17,14 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition"
 
--- DATE "08/21/2025 10:44:31"
+-- DATE "08/22/2025 09:56:25"
 
 -- 
 -- Device: Altera 5CSXFC6D6F31C6 Package FBGA896
 -- 
 
 -- 
--- This VHDL file should be used for QuestaSim (VHDL) only
+-- This VHDL file should be used for Questa Intel FPGA (VHDL) only
 -- 
 
 LIBRARY ALTERA_LNSIM;
@@ -98,22 +98,22 @@ SIGNAL \deco|Mux2~0_combout\ : std_logic;
 SIGNAL \deco|Mux1~0_combout\ : std_logic;
 SIGNAL \deco|Mux0~0_combout\ : std_logic;
 SIGNAL \rest|rest3|Bout~combout\ : std_logic;
-SIGNAL \deco|ALT_INV_Mux0~0_combout\ : std_logic;
+SIGNAL \ALT_INV_Add0~5_combout\ : std_logic;
+SIGNAL \ALT_INV_SW[6]~input_o\ : std_logic;
 SIGNAL \ALT_INV_Add0~4_combout\ : std_logic;
+SIGNAL \ALT_INV_SW[4]~input_o\ : std_logic;
+SIGNAL \ALT_INV_SW[7]~input_o\ : std_logic;
+SIGNAL \ALT_INV_SW[5]~input_o\ : std_logic;
+SIGNAL \ALT_INV_Add0~3_combout\ : std_logic;
 SIGNAL \ALT_INV_SW[2]~input_o\ : std_logic;
+SIGNAL \ALT_INV_Add0~1_combout\ : std_logic;
+SIGNAL \ALT_INV_SW[3]~input_o\ : std_logic;
+SIGNAL \ALT_INV_Add0~0_combout\ : std_logic;
 SIGNAL \ALT_INV_SW[1]~input_o\ : std_logic;
 SIGNAL \rest|rest2|ALT_INV_Bout~combout\ : std_logic;
-SIGNAL \ALT_INV_SW[0]~input_o\ : std_logic;
-SIGNAL \ALT_INV_SW[4]~input_o\ : std_logic;
-SIGNAL \ALT_INV_SW[6]~input_o\ : std_logic;
-SIGNAL \ALT_INV_SW[7]~input_o\ : std_logic;
-SIGNAL \ALT_INV_Add0~0_combout\ : std_logic;
-SIGNAL \ALT_INV_Add0~5_combout\ : std_logic;
-SIGNAL \ALT_INV_SW[3]~input_o\ : std_logic;
-SIGNAL \ALT_INV_Add0~1_combout\ : std_logic;
-SIGNAL \ALT_INV_SW[5]~input_o\ : std_logic;
 SIGNAL \ALT_INV_Add0~2_combout\ : std_logic;
-SIGNAL \ALT_INV_Add0~3_combout\ : std_logic;
+SIGNAL \deco|ALT_INV_Mux0~0_combout\ : std_logic;
+SIGNAL \ALT_INV_SW[0]~input_o\ : std_logic;
 
 BEGIN
 
@@ -123,22 +123,22 @@ Neg <= ww_Neg;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
-\deco|ALT_INV_Mux0~0_combout\ <= NOT \deco|Mux0~0_combout\;
+\ALT_INV_Add0~5_combout\ <= NOT \Add0~5_combout\;
+\ALT_INV_SW[6]~input_o\ <= NOT \SW[6]~input_o\;
 \ALT_INV_Add0~4_combout\ <= NOT \Add0~4_combout\;
+\ALT_INV_SW[4]~input_o\ <= NOT \SW[4]~input_o\;
+\ALT_INV_SW[7]~input_o\ <= NOT \SW[7]~input_o\;
+\ALT_INV_SW[5]~input_o\ <= NOT \SW[5]~input_o\;
+\ALT_INV_Add0~3_combout\ <= NOT \Add0~3_combout\;
 \ALT_INV_SW[2]~input_o\ <= NOT \SW[2]~input_o\;
+\ALT_INV_Add0~1_combout\ <= NOT \Add0~1_combout\;
+\ALT_INV_SW[3]~input_o\ <= NOT \SW[3]~input_o\;
+\ALT_INV_Add0~0_combout\ <= NOT \Add0~0_combout\;
 \ALT_INV_SW[1]~input_o\ <= NOT \SW[1]~input_o\;
 \rest|rest2|ALT_INV_Bout~combout\ <= NOT \rest|rest2|Bout~combout\;
-\ALT_INV_SW[0]~input_o\ <= NOT \SW[0]~input_o\;
-\ALT_INV_SW[4]~input_o\ <= NOT \SW[4]~input_o\;
-\ALT_INV_SW[6]~input_o\ <= NOT \SW[6]~input_o\;
-\ALT_INV_SW[7]~input_o\ <= NOT \SW[7]~input_o\;
-\ALT_INV_Add0~0_combout\ <= NOT \Add0~0_combout\;
-\ALT_INV_Add0~5_combout\ <= NOT \Add0~5_combout\;
-\ALT_INV_SW[3]~input_o\ <= NOT \SW[3]~input_o\;
-\ALT_INV_Add0~1_combout\ <= NOT \Add0~1_combout\;
-\ALT_INV_SW[5]~input_o\ <= NOT \SW[5]~input_o\;
 \ALT_INV_Add0~2_combout\ <= NOT \Add0~2_combout\;
-\ALT_INV_Add0~3_combout\ <= NOT \Add0~3_combout\;
+\deco|ALT_INV_Mux0~0_combout\ <= NOT \deco|Mux0~0_combout\;
+\ALT_INV_SW[0]~input_o\ <= NOT \SW[0]~input_o\;
 
 -- Location: IOOBUF_X60_Y0_N19
 \HEX0[0]~output\ : cyclonev_io_obuf
