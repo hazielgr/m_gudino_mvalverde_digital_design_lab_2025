@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo/simulation/questa
 vlpm_abs
-Z1 !s110 1757454201
+Z1 !s110 1757455123
 !i10b 1
 !s100 C1CEPTa>h1KTS35mS<k;H0
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -20,13 +20,13 @@ R0
 Z4 w1701321885
 Z5 8c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/220model.v
 Z6 Fc:/intelfpga_lite/23.1std/quartus/eda/sim_lib/220model.v
-!i122 11
+!i122 13
 L0 3479 44
 Z7 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z8 !s108 1757454201.000000
+Z8 !s108 1757455123.000000
 !s107 c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/220model.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|lpm_ver|c:/intelfpga_lite/23.1std/quartus/eda/sim_lib/220model.v|
 !i113 1
@@ -43,7 +43,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 2606 179
 R7
 r1
@@ -66,7 +66,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 1682 62
 R7
 r1
@@ -79,7 +79,7 @@ R9
 R10
 R11
 vlpm_bipad
-R1
+Z13 !s110 1757455124
 !i10b 1
 !s100 Gb[LXe:lohRN2SL^fRIH@2
 R2
@@ -89,7 +89,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 6690 53
 R7
 r1
@@ -112,7 +112,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 1972 69
 R7
 r1
@@ -135,7 +135,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 2321 267
 R7
 r1
@@ -158,7 +158,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 2812 157
 R7
 r1
@@ -181,7 +181,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 1578 34
 R7
 r1
@@ -204,7 +204,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 3543 266
 R7
 r1
@@ -227,7 +227,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 2193 109
 R7
 r1
@@ -250,7 +250,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 1367 194
 R7
 r1
@@ -274,7 +274,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 3272 188
 R7
 r1
@@ -297,7 +297,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 3951 201
 R7
 r1
@@ -320,7 +320,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 5398 313
 R7
 r1
@@ -333,7 +333,7 @@ R9
 R10
 R11
 vlpm_fifo_dc
-R1
+R13
 !i10b 1
 !s100 5nLhFba4OQ:l<Q]Y1FgVF2
 R2
@@ -343,7 +343,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 6455 105
 R7
 r1
@@ -356,7 +356,7 @@ R9
 R10
 R11
 vlpm_fifo_dc_async
-R1
+R13
 !i10b 1
 !s100 Qko<L@E;i=`Qo?lo6z1Oz1
 R2
@@ -366,7 +366,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 6018 418
 R7
 r1
@@ -389,7 +389,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 5729 69
 R7
 r1
@@ -412,7 +412,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 5816 184
 R7
 r1
@@ -435,7 +435,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 1257 105
 R7
 r1
@@ -449,7 +449,7 @@ R10
 R11
 n@l@p@m_@h@i@n@t_@e@v@a@l@u@a@t@i@o@n
 vlpm_inpad
-R1
+R13
 !i10b 1
 !s100 ;JLk9PZQJUHMTRB3ez:9`2
 R2
@@ -459,7 +459,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 6578 37
 R7
 r1
@@ -482,7 +482,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 1629 35
 R7
 r1
@@ -505,7 +505,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 3827 103
 R7
 r1
@@ -528,7 +528,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 77 1159
 R7
 r1
@@ -552,7 +552,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 2986 259
 R7
 r1
@@ -575,7 +575,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 2058 117
 R7
 r1
@@ -598,7 +598,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 1762 63
 R7
 r1
@@ -611,7 +611,7 @@ R9
 R10
 R11
 vlpm_outpad
-R1
+R13
 !i10b 1
 !s100 g_I7N<?6L<7LkW>^6m=Hm2
 R2
@@ -621,7 +621,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 6634 37
 R7
 r1
@@ -644,7 +644,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 4630 272
 R7
 r1
@@ -667,7 +667,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 4374 238
 R7
 r1
@@ -690,7 +690,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 4921 241
 R7
 r1
@@ -713,7 +713,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 5183 199
 R7
 r1
@@ -736,7 +736,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 4170 184
 R7
 r1
@@ -759,7 +759,7 @@ R0
 R4
 R5
 R6
-!i122 11
+!i122 13
 L0 1843 63
 R7
 r1

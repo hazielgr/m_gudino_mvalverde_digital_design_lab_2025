@@ -6,7 +6,7 @@ module sumador_Nbits #(parameter int P=4)(
 );
 
     logic [P:0] carry;
-    logic [P:0] tmp_sum; // resultado extendido para overflow
+    logic [P-1:0] sum_bits;
     assign carry[0] = cin;
 
     genvar i;
@@ -16,24 +16,20 @@ module sumador_Nbits #(parameter int P=4)(
                 .a(a[i]),
                 .b(b[i]),
                 .cin(carry[i]),
-                .sum(),       // usamos temporal
+                .sum(sum_bits[i]),
                 .cout(carry[i+1])
             );
         end
     endgenerate
 
-    // resultado extendido para overflow real
-    assign tmp_sum = {1'b0,a} + {1'b0,b} + cin;
+    assign cout = carry[P];          // carry final
+    assign C    = carry[P];          // carry final
+    assign V    = carry[P];          // overflow = carry si la suma excede P bits
+    assign Z    = (sum_bits == 0);   // resultado cero
+    assign N    = 0;                 // suma siempre positiva
 
-    // banderas según tus reglas
-    assign cout = carry[P];             
-    assign C    = (tmp_sum > {1'b0,{P{1'b1}}}); // carry si hubo overflow
-    assign V    = (tmp_sum > {1'b0,{P{1'b1}}}); // overflow si excede P bits
-    assign Z    = (tmp_sum[P-1:0] == 0);
-    assign N    = 0; // suma siempre positiva según tus reglas
-
-    // Resultado truncado: si overflow, sum = 0, si no, sum = P bits
-    assign sum = V ? {P{1'b0}} : tmp_sum[P-1:0];
+    // resultado truncado o cero si overflow
+    assign sum = V ? {P{1'b0}} : sum_bits;
 
 endmodule
 

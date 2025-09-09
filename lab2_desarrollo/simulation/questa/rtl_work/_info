@@ -11,12 +11,12 @@ cModel Technology
 Z0 dC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo/simulation/questa
 vrestador_1bit
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1757454222
+!s110 1757455151
 !i10b 1
 !s100 aBF=[iEiD;34Jm80=zBi92
-Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
 IN:07U>hP>K]6K;]zzHLiP2
-Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
 w1757429313
@@ -24,52 +24,52 @@ w1757429313
 FC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo/restador_1bit.sv
 !i122 3
 L0 2 11
-Z5 OV;L;2020.1;71
+Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1757454222.000000
+!s108 1757455151.000000
 !s107 C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo/restador_1bit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo|C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo/restador_1bit.sv|
 !i113 1
-Z7 o-sv -work work
-Z8 !s92 -sv -work work +incdir+C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo
-Z9 tCvgOpt 0
+Z5 o-sv -work work
+Z6 !s92 -sv -work work +incdir+C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo
+Z7 tCvgOpt 0
 vrestador_Nbits
 R1
-R2
+Z8 !s110 1757455150
 !i10b 1
-!s100 LXEo2a1BiezTgSoOX0J9L1
+!s100 ?6FZ0_7d83?HILb@A0]8z1
+R2
+IP]ELLOUDnNfM_G8P4zagK0
 R3
-IAI9cZI?Od?C[o^@nz5M:h1
-R4
 S1
 R0
-w1757454180
+w1757454417
 8C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo/restador_Nbits.sv
 FC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo/restador_Nbits.sv
 !i122 2
 L0 1 35
-R5
+R4
 r1
 !s85 0
 31
-R6
+Z9 !s108 1757455150.000000
 !s107 C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo/restador_Nbits.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo|C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo/restador_Nbits.sv|
 !i113 1
+R5
+R6
 R7
-R8
-R9
 nrestador_@nbits
 vsumador_1bit
 R1
-R2
+R8
 !i10b 1
 !s100 RcQ32Yo;1<hOdF5^>B;1o2
-R3
+R2
 I?1BZK?GLDTBZhd3>7FaS82
-R4
+R3
 S1
 R0
 w1757429078
@@ -77,52 +77,52 @@ w1757429078
 FC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo/sumador_1bit.sv
 !i122 0
 L0 1 12
-R5
+R4
 r1
 !s85 0
 31
-!s108 1757454221.000000
+R9
 !s107 C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo/sumador_1bit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo|C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo/sumador_1bit.sv|
 !i113 1
+R5
+R6
 R7
-R8
-R9
 vsumador_Nbits
 R1
-R2
+R8
 !i10b 1
-!s100 lF;2m?icl2h]_1^ljo36e0
+!s100 [8O^8Cc;bh8[4B:WH`d[z3
+R2
+I<6nB?DPLV;dk`@LzNkS<^3
 R3
-I:2<L>0NPgI5Q[KG>j9VSI0
-R4
 S1
 R0
-w1757452938
+w1757455099
 8C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo/sumador_Nbits.sv
 FC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo/sumador_Nbits.sv
 !i122 1
-L0 1 38
-R5
+L0 1 34
+R4
 r1
 !s85 0
 31
-R6
+R9
 !s107 C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo/sumador_Nbits.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo|C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo/sumador_Nbits.sv|
 !i113 1
+R5
+R6
 R7
-R8
-R9
 nsumador_@nbits
 vtestBench
 R1
-R2
+!s110 1757455152
 !i10b 1
 !s100 :dDh44J;3;iIPidgYRe`c1
-R3
+R2
 IPAcI]d:4W?:V=oUg722<E2
-R4
+R3
 S1
 R0
 w1757454192
@@ -130,15 +130,15 @@ w1757454192
 FC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo/testBench.sv
 !i122 5
 L0 2 44
-R5
+R4
 r1
 !s85 0
 31
-R6
+!s108 1757455152.000000
 !s107 C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo/testBench.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo|C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/lab2_desarrollo/testBench.sv|
 !i113 1
+R5
+R6
 R7
-R8
-R9
 ntest@bench
