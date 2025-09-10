@@ -1,5 +1,4 @@
-`include "n_bit_adder.sv"
-`include "and1.sv"
+
 
 module n_bit_multiplier #(
   parameter int N = 4

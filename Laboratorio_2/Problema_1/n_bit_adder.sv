@@ -1,5 +1,3 @@
-`include "full_adder.sv"
-
 module n_bit_adder #(
   parameter int N = 4
 )(
@@ -14,7 +12,7 @@ module n_bit_adder #(
   genvar i;
   generate
     for (i = 0; i < N; i++) begin : GEN_FA
-      full_adder_tt fa(
+      full_adder fa(
         .a(A[i]), .b(B[i]), .cin(c[i]),
         .sum(S[i]), .cout(c[i+1])
       );

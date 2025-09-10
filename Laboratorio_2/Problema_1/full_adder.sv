@@ -1,8 +1,5 @@
-`include "and1.sv"
-`include "or1.sv"
-`include "xor1.sv"
 
-module full_adder_tt(
+module full_adder(
   input  logic a, b, cin,
   output logic sum, cout
 );
