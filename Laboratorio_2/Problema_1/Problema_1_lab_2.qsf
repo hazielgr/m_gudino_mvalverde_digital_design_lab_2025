@@ -57,3 +57,9 @@ set_global_assignment -name SYSTEMVERILOG_FILE or1.sv
 set_global_assignment -name SYSTEMVERILOG_FILE xor1.sv
 set_global_assignment -name SYSTEMVERILOG_FILE full_adder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE rca_adder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE n_bit_adder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE n_bit_subtractor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE n_bit_multiplier.sv
+set_global_assignment -name SYSTEMVERILOG_FILE divisor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE modulo.sv
+set_global_assignment -name SYSTEMVERILOG_FILE shifter.sv
