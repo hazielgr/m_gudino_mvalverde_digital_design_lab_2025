@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition"
 
-// DATE "09/09/2025 19:48:43"
+// DATE "09/10/2025 00:14:20"
 
 // 
 // Device: Altera 5CSXFC6D6F31C6 Package FBGA896
@@ -40,16 +40,16 @@ module top_lab2 (
 	HEX4,
 	HEX5,
 	LED);
-input 	logic CLOCK_50 ;
-input 	logic [9:0] SW ;
-input 	logic [3:0] KEY ;
-output 	logic [6:0] HEX0 ;
-output 	logic [6:0] HEX1 ;
-output 	logic [6:0] HEX2 ;
-output 	logic [6:0] HEX3 ;
-output 	logic [6:0] HEX4 ;
-output 	logic [6:0] HEX5 ;
-output 	logic [3:0] LED ;
+input 	CLOCK_50;
+input 	[9:0] SW;
+input 	[3:0] KEY;
+output 	[6:0] HEX0;
+output 	[6:0] HEX1;
+output 	[6:0] HEX2;
+output 	[6:0] HEX3;
+output 	[6:0] HEX4;
+output 	[6:0] HEX5;
+output 	[3:0] LED;
 
 // Design Ports Information
 // SW[8]	=>  Location: PIN_AC29,	 I/O Standard: 2.5 V,	 Current Strength: Default

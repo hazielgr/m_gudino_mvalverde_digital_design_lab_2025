@@ -1,0 +1,264 @@
+# Reading pref.tcl
+# do Problema_1_lab_2_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/and1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:16 on Sep 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/and1.sv 
+# -- Compiling module and1
+# 
+# Top level modules:
+# 	and1
+# End time: 01:53:16 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/or1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:16 on Sep 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/or1.sv 
+# -- Compiling module or1
+# 
+# Top level modules:
+# 	or1
+# End time: 01:53:17 on Sep 10,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/xor1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:17 on Sep 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/xor1.sv 
+# -- Compiling module xor1
+# 
+# Top level modules:
+# 	xor1
+# End time: 01:53:17 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/full_adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:17 on Sep 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/full_adder.sv 
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# End time: 01:53:17 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/n_bit_adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:17 on Sep 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/n_bit_adder.sv 
+# -- Compiling module n_bit_adder
+# 
+# Top level modules:
+# 	n_bit_adder
+# End time: 01:53:17 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/n_bit_subtractor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:17 on Sep 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/n_bit_subtractor.sv 
+# -- Compiling module n_bit_subtractor
+# 
+# Top level modules:
+# 	n_bit_subtractor
+# End time: 01:53:17 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/n_bit_multiplier.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:17 on Sep 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/n_bit_multiplier.sv 
+# -- Compiling module n_bit_multiplier
+# 
+# Top level modules:
+# 	n_bit_multiplier
+# End time: 01:53:17 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/divisor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:17 on Sep 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/divisor.sv 
+# -- Compiling module divisor
+# 
+# Top level modules:
+# 	divisor
+# End time: 01:53:17 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/modulo.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:18 on Sep 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/modulo.sv 
+# -- Compiling module modulo
+# 
+# Top level modules:
+# 	modulo
+# End time: 01:53:18 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/shifter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:18 on Sep 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/shifter.sv 
+# -- Compiling module shifter
+# 
+# Top level modules:
+# 	shifter
+# End time: 01:53:18 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/hex7seg.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:18 on Sep 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/hex7seg.sv 
+# -- Compiling module hex7seg
+# 
+# Top level modules:
+# 	hex7seg
+# End time: 01:53:18 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/bin_to_bcd.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:18 on Sep 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/bin_to_bcd.sv 
+# -- Compiling module bin_to_bcd
+# 
+# Top level modules:
+# 	bin_to_bcd
+# End time: 01:53:18 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/btn_debouncer.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:18 on Sep 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/btn_debouncer.sv 
+# -- Compiling module btn_debouncer
+# 
+# Top level modules:
+# 	btn_debouncer
+# End time: 01:53:18 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/one_pulse.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:18 on Sep 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/one_pulse.sv 
+# -- Compiling module one_pulse
+# 
+# Top level modules:
+# 	one_pulse
+# End time: 01:53:18 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:18 on Sep 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 01:53:18 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/top_lab2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:18 on Sep 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/top_lab2.sv 
+# -- Compiling module top_lab2
+# 
+# Top level modules:
+# 	top_lab2
+# End time: 01:53:19 on Sep 10,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/n_bit_xor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:19 on Sep 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/n_bit_xor.sv 
+# -- Compiling module n_bit_xor
+# 
+# Top level modules:
+# 	n_bit_xor
+# End time: 01:53:19 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/n_bit_or.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:19 on Sep 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/n_bit_or.sv 
+# -- Compiling module n_bit_or
+# 
+# Top level modules:
+# 	n_bit_or
+# End time: 01:53:19 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/n_bit_and.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:19 on Sep 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/n_bit_and.sv 
+# -- Compiling module n_bit_and
+# 
+# Top level modules:
+# 	n_bit_and
+# End time: 01:53:19 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS\ 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1 {C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/ALU_TB.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:53:19 on Sep 10,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1" C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/ALU_TB.sv 
+# -- Compiling module ALU_TB
+# 
+# Top level modules:
+# 	ALU_TB
+# End time: 01:53:19 on Sep 10,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  ALU_TB
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" ALU_TB 
+# Start time: 01:53:19 on Sep 10,2025
+# Loading sv_std.std
+# Loading work.ALU_TB
+# Loading work.alu
+# Loading work.n_bit_adder
+# Loading work.n_bit_subtractor
+# Loading work.n_bit_multiplier
+# Loading work.n_bit_and
+# Loading work.n_bit_or
+# Loading work.n_bit_xor
+# Loading work.divisor
+# Loading work.modulo
+# Loading work.shifter
+# Loading work.full_adder
+# Loading work.xor1
+# Loading work.and1
+# Loading work.or1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# == TESTBENCH ALU N=4 ==
+# Caso                 | OP  |  A  B SH | OUT | NZCV | EXPECTED | RESULT
+# ------------------------------------------------------------------------
+# ADD 1+3              | ADD | A= 1 B= 3 SH=0 | OUT= 4 | NZCV=0000 | EXP= 4 NZCV=0000 | PASS
+# ADD 9+9              | ADD | A= 9 B= 9 SH=0 | OUT= 2 | NZCV=0011 | EXP= 2 NZCV=0011 | PASS
+# SUB 7-3              | SUB | A= 7 B= 3 SH=0 | OUT= 4 | NZCV=0000 | EXP= 4 NZCV=0000 | PASS
+# SUB 3-7              | SUB | A= 3 B= 7 SH=0 | OUT=12 | NZCV=1010 | EXP=12 NZCV=1010 | PASS
+# MUL 3*9              | MUL | A= 3 B= 9 SH=0 | OUT=11 | NZCV=0000 | EXP=11 NZCV=0000 | PASS
+# MUL 15*15            | MUL | A=15 B=15 SH=0 | OUT= 1 | NZCV=1000 | EXP= 1 NZCV=1000 | PASS
+# DIV 7/3              | DIV | A= 7 B= 3 SH=0 | OUT= 2 | NZCV=0000 | EXP= 2 NZCV=0000 | PASS
+# DIV 8/0              | DIV | A= 8 B= 0 SH=0 | OUT= 0 | NZCV=0100 | EXP= 0 NZCV=0100 | PASS
+# MOD 7%3              | MOD | A= 7 B= 3 SH=0 | OUT= 1 | NZCV=0000 | EXP= 1 NZCV=0000 | PASS
+# MOD 8%0              | MOD | A= 8 B= 0 SH=0 | OUT= 8 | NZCV=1000 | EXP= 8 NZCV=1000 | PASS
+# AND 10&5             | AND | A=10 B= 5 SH=0 | OUT= 0 | NZCV=0100 | EXP= 0 NZCV=0100 | PASS
+# OR 10|5              |  OR | A=10 B= 5 SH=0 | OUT=15 | NZCV=1000 | EXP=15 NZCV=1000 | PASS
+# XOR 12^9             | XOR | A=12 B= 9 SH=0 | OUT= 5 | NZCV=0000 | EXP= 5 NZCV=0000 | PASS
+# SHL 10<<1            | SHL | A=10 B= 0 SH=1 | OUT= 4 | NZCV=0010 | EXP= 4 NZCV=0010 | PASS
+# SHR 10>>2            | SHR | A=10 B= 0 SH=2 | OUT= 2 | NZCV=0010 | EXP= 2 NZCV=0010 | PASS
+# ------------------------------------------------------------------------
+# == Fin TB ==
+# ** Note: $finish    : C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/ALU_TB.sv(254)
+#    Time: 15 ns  Iteration: 0  Instance: /ALU_TB
+# 1
+# Break in Module ALU_TB at C:/Users/micha/OneDrive/Documentos/TEC/IIS 2025/Digital_Design_Lab/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_2/Problema_1/ALU_TB.sv line 254
