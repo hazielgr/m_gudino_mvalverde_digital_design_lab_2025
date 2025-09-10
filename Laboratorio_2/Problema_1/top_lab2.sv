@@ -1,22 +1,22 @@
-// SW[3:0]  -> DATA_BUS (cargar A, B y SHAMT)
-// SW[7:4]  -> OP[3:0]  (0000 ADD,0001 SUB,0010 MUL,0011 DIV,0100 MOD,0101 AND,0110 OR,0111 XOR,1000 SHL,1001 SHR)
-// SW[9]    -> RESET (0 = limpia registros A, B y SHAMT; 1 = normal)
-// KEY0     -> LOAD A
-// KEY1     -> LOAD B
-// KEY2     -> LOAD SHAMT (sólo si OP=1000/1001)
+// SW[3:0]  DATA_BUS (cargar A, B y SHAMT)
+// SW[7:4]  OP[3:0]  (0000 ADD,0001 SUB,0010 MUL,0011 DIV,0100 MOD,0101 AND,0110 OR,0111 XOR,1000 SHL,1001 SHR)
+// SW[9]    RESET (0 = limpia registros A, B y SHAMT; 1 = normal)
+// KEY0      LOAD A
+// KEY1     LOAD B
+// KEY2     LOAD SHAMT (sólo si OP=1000/1001)
 // HEX*: solo resultado en decimal (2 dígitos normal / 3 dígitos MUL)
-// LED[3:0] -> {N,Z,C,V}
+// LED[3:0]  {N,Z,C,V}
 
 module top_lab2 #(
   parameter int N = 4
 )(
   input  logic        CLOCK_50,
   input  logic [9:0]  SW,
-  input  logic [3:0]  KEY,         // activos en bajo
+  input  logic [3:0]  KEY,         
   output logic [6:0]  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5,
   output logic [3:0]  LED
 );
-  // ---------- UI: switches ----------
+  
   logic [3:0] DATA_BUS;
   logic [3:0] OP;
   logic       RESET_N;
@@ -24,7 +24,7 @@ module top_lab2 #(
   assign OP       = SW[7:4];
   assign RESET_N  = SW[9];   // Reset manual: 1=normal, 0=reset
 
-  // ---------- Debounce + one-pulse ----------
+  
   logic ldA_lvl, ldB_lvl, ldS_lvl;
   logic ldA_p,   ldB_p,   ldS_p;
   btn_debouncer #(.CNT(20)) DB0 (.clk(CLOCK_50), .btn_n(KEY[0]), .btn_clean(ldA_lvl));
@@ -34,9 +34,9 @@ module top_lab2 #(
   one_pulse OP1 (.clk(CLOCK_50), .level_in(ldB_lvl), .pulse_out(ldB_p));
   one_pulse OP2 (.clk(CLOCK_50), .level_in(ldS_lvl), .pulse_out(ldS_p));
 
-  // ---------- Registros A, B, SHAMT ----------
+  // registros A, B, SHAMT 
   logic [N-1:0] A_reg, B_reg;
-  logic [$clog2(N)-1:0] SHAMT_reg; // N=4 -> 2 bits
+  logic [$clog2(N)-1:0] SHAMT_reg; 
 
   always_ff @(posedge CLOCK_50) begin
     if (!RESET_N) begin
@@ -50,7 +50,7 @@ module top_lab2 #(
     end
   end
 
-  // ---------- ALU ----------
+  //  ALU 
   logic [N-1:0]   Rn;
   logic [2*N-1:0] Rw;
   logic Nf, Zf, Cf, Vf;
@@ -60,10 +60,10 @@ module top_lab2 #(
     .Nflag(Nf), .Zflag(Zf), .Cflag(Cf), .Vflag(Vf)
   );
 
-  // ---------- Flags -> LEDs ----------
+  // Flags -> LEDs
   assign LED = {Nf, Zf, Cf, Vf};
 
-  // ---------- BIN -> BCD -> 7-seg ----------
+  //  BIN -> BCD -> 7-seg 
   logic is_mul;
   assign is_mul = (OP == 4'b0010);
 
