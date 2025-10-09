@@ -1,4 +1,4 @@
-// vga_timing_640x480_en.sv
+
 module vga_timing_640x480_en (
     input  logic        clk,     // 50 MHz
     input  logic        rst_n,

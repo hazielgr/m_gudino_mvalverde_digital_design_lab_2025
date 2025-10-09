@@ -1,7 +1,4 @@
 
-// =============================================================
-// Módulo: mem_fsm
-// =============================================================
 module mem_fsm #(
     parameter int N_CARDS = 16,
     parameter int IDX_W   = $clog2(N_CARDS)
@@ -9,17 +6,17 @@ module mem_fsm #(
     input  logic                 clk,
     input  logic                 rst_n,
 
-    // Señales de selección manual (desde navegador/cursores)
-    input  logic                 pick_valid,      // pulso cuando usuario confirma
+    // Señales de selección manual 
+    input  logic                 pick_valid,      
     input  logic [IDX_W-1:0]     pick_idx,        // índice elegido por el jugador
 
     // Señales desde lógica de tablero
-    input  logic                 idx_is_valid,    // 1 si pick_idx es carta válida (no emparejada)
-    input  logic                 match_equal,     // 1 si sel1 == sel2 en valor
-    input  logic                 all_paired,      // 1 si todas las parejas fueron encontradas
+    input  logic                 idx_is_valid,    
+    input  logic                 match_equal,     
+    input  logic                 all_paired,      
 
     // PRNG / Auto-pick (entrega una carta válida cuando se solicita)
-    input  logic                 auto_valid,      // 1 cuando auto_idx es válido
+    input  logic                 auto_valid,      
     input  logic [IDX_W-1:0]     auto_idx,
 
     // Temporizador principal (15s)
@@ -28,14 +25,14 @@ module mem_fsm #(
     output logic                 timer15_reload,
     output logic                 timer15_stop,
 
-    // Mini temporizador (0.5-1s para SHOWMISS)
+    // Mini temporizador 
     input  logic                 mini_done,
     output logic                 mini_start,
 
     // Señales hacia el tablero / vista
-    output logic                 reveal_pulse,    // pulso: revelar carta en idx_reveal
-    output logic [IDX_W-1:0]     idx_reveal,      // índice de carta a revelar (REV1/REV2/AUTO)
-    output logic                 pair_mark_pulse, // pulso para marcar par definitivo
+    output logic                 reveal_pulse,    
+    output logic [IDX_W-1:0]     idx_reveal,      
+    output logic                 pair_mark_pulse, 
 
     // Señales de control/estado
     output logic [1:0]           cur_player,      // 1 o 2 (cod: 0->J1, 1->J2)
@@ -68,7 +65,7 @@ module mem_fsm #(
     logic [IDX_W-1:0] sel1_idx, sel2_idx;
     logic              sel1_valid, sel2_valid;
 
-    // Puntuación simple interna (para winner). 
+    // Puntuación simple interna 
     int score_j1, score_j2;
 
     // Jugador actual: 0 -> J1, 1 -> J2
@@ -98,7 +95,7 @@ module mem_fsm #(
         unique case (state)
             S_INIT: begin
                 // Se limpian variables y se fija J1
-                timer15_stop  = 1'b1;  // cargado pero detenido (se hará en TURN_START)
+                timer15_stop  = 1'b1;  
                 nstate        = S_TURN_START;
             end
 
@@ -106,7 +103,7 @@ module mem_fsm #(
                 // Limpia selecciones, arranca timer
                 timer15_reload = 1'b1;
                 timer15_start  = 1'b1;
-                if (1) nstate  = S_NAV1; // listo para primera selección
+                if (1) nstate  = S_NAV1; 
             end
 
             S_NAV1: begin
@@ -121,7 +118,7 @@ module mem_fsm #(
             S_REV1: begin
                 // Revela primera carta
                 reveal_pulse = 1'b1;
-                idx_reveal   = pick_valid && idx_is_valid ? pick_idx : sel1_idx; // por seguridad
+                idx_reveal   = pick_valid && idx_is_valid ? pick_idx : sel1_idx; 
                 nstate       = S_NAV2;
             end
 
@@ -155,8 +152,8 @@ module mem_fsm #(
                         nstate         = S_TURN_START;
                     end
                 end else begin
-                    // Mostrar por ~0.5-1s y luego ocultar (ocultar lo hace el tablero externo)
-                    mini_start = 1'b1; // arrancar mini temporizador
+                    
+                    mini_start = 1'b1; 
                     nstate     = S_SHOWMISS;
                 end
             end
@@ -179,7 +176,7 @@ module mem_fsm #(
             end
 
             S_AUTO2: begin
-                // Selección automática de la segunda carta (distinta a sel1)
+                // Selección automática de la segunda carta 
                 if (auto_valid) begin
                     reveal_pulse = 1'b1;
                     idx_reveal   = auto_idx;
@@ -196,7 +193,7 @@ module mem_fsm #(
         endcase
     end
 
-    // Estado / Registros de selección y jugador
+    // Estado Registros de selección y jugador
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             state      <= S_INIT;
@@ -239,7 +236,7 @@ module mem_fsm #(
                 if (cur_plr == 1'b0) score_j1 <= score_j1 + 1; else score_j2 <= score_j2 + 1;
             end
 
-            // Cambio de jugador sólo en fallo (después del SHOWMISS)
+            // Cambio de jugador sólo en fallo 
             if (state == S_SHOWMISS && mini_done) begin
                 cur_plr <= ~cur_plr;
             end

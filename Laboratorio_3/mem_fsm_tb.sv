@@ -1,12 +1,12 @@
-// =============================================================
-// TESTBENCH: mem_fsm_tb  (corregido timing match_equal)
-// =============================================================
+
+// TESTBENCH: mem_fsm_tb  
+
 `timescale 1ns/1ps
 module mem_fsm_tb;
     localparam int N_CARDS = 16;
     localparam int IDX_W   = $clog2(N_CARDS);
 
-    // ===== Estados (idénticos a los del DUT) =====
+    //Estados 
     localparam logic [3:0]
       S_INIT       = 4'd0,
       S_TURN_START = 4'd1,
@@ -21,7 +21,7 @@ module mem_fsm_tb;
       S_GAMEOVER   = 4'd10;
 
     // Reloj y reset
-    logic clk = 0; always #5 clk = ~clk; // 100 MHz sim
+    logic clk = 0; always #5 clk = ~clk; 
     logic rst_n = 0;
 
     // Señales hacia la FSM
@@ -64,14 +64,14 @@ module mem_fsm_tb;
         .fsm_state
     );
 
-    // ---------------------------------------------------------
-    // MODELO SIMPLE (lógica necesaria)
-    // ---------------------------------------------------------
+   
+   
+ 
     int deck   [N_CARDS];
     bit paired [N_CARDS];
     int sb_score_j1, sb_score_j2;
 
-    // Inicializa mazo determinista
+    // Inicializa mazo 
     task init_deck;
         int i;
         int temp [16];
@@ -88,7 +88,7 @@ module mem_fsm_tb;
         end
     endtask
 
-    // Validez de índice: no emparejada
+    // Validez de índice no emparejada
     function bit is_valid_idx (int idx);
         return (idx>=0 && idx<N_CARDS && !paired[idx]);
     endfunction
@@ -106,7 +106,7 @@ module mem_fsm_tb;
         end
     endtask
 
-    // Temporizador 15s simulado (lo maneja el test)
+    // Temporizador 15s simulado
     initial begin
         timer15_done = 0;
         forever begin
@@ -116,7 +116,7 @@ module mem_fsm_tb;
         end
     end
 
-    // Mini temporizador (SHOWMISS): 5 ciclos tras mini_start
+    // Mini temporizador (SHOWMISS)
     initial begin
         mini_done = 0;
         forever begin
@@ -134,7 +134,7 @@ module mem_fsm_tb;
         pick_valid = 1; @(posedge clk); pick_valid = 0;
     endtask
 
-    // Rastreo de dos últimas revelaciones (secuencial)
+    // Rastreo de dos últimas revelaciones
     int last_rev1=-1, last_rev2=-1;
     always @(posedge clk) begin
         if (reveal_pulse) begin
@@ -149,7 +149,7 @@ module mem_fsm_tb;
         end
     end
 
-    // match_equal debe estar disponible COMBINACIONAL en S_EVAL
+    // match_equal 
     always_comb begin
         if (fsm_state==S_EVAL && last_rev1!=-1 && last_rev2!=-1)
             match_equal = (deck[last_rev1] == deck[last_rev2]);
@@ -157,7 +157,7 @@ module mem_fsm_tb;
             match_equal = 1'b0;
     end
 
-    // Conteo de emparejadas para all_paired (combinacional)
+    // Conteo de emparejadas para all_paired 
     int count;
     always_comb begin
         count = 0;
@@ -165,9 +165,9 @@ module mem_fsm_tb;
         all_paired = (count==N_CARDS);
     end
 
-    // ---------------------------------------------------------
+
     // ESCENARIOS de prueba
-    // ---------------------------------------------------------
+   
     initial begin
         pick_valid = 0; pick_idx = '0; auto_valid = 0; auto_idx = '0;
         init_deck();
