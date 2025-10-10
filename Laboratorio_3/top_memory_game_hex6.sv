@@ -256,7 +256,8 @@ module top_memory_game_hex6 #(
         second_revealed_any & (~match_equal) & mini_done;
 
     // *** CHANGE #1: let FSM pulse through for both match & mismatch ***
-    wire pair_mark_pulse_g = pair_mark_match_hold | pair_mark_auto | pair_mark_pulse_fsm;
+    //wire pair_mark_pulse_g = pair_mark_match_hold | pair_mark_auto | pair_mark_pulse_fsm;
+	 wire pair_mark_pulse_g = pair_mark_match_hold | pair_mark_auto | (pair_mark_pulse_fsm & ~match_equal);
     wire reveal_pulse_g    = reveal_pulse_fsm & ready_after_shuffle;
 
     // Shuffle conditions:
