@@ -1,4 +1,3 @@
-
 module mem_fsm #(
     parameter int N_CARDS = 16,
     parameter int IDX_W   = $clog2(N_CARDS)
@@ -6,41 +5,41 @@ module mem_fsm #(
     input  logic                 clk,
     input  logic                 rst_n,
 
-    // Señales de selección manual 
-    input  logic                 pick_valid,      
-    input  logic [IDX_W-1:0]     pick_idx,        // índice elegido por el jugador
+    // Manual selection
+    input  logic                 pick_valid,
+    input  logic [IDX_W-1:0]     pick_idx,
 
-    // Señales desde lógica de tablero
-    input  logic                 idx_is_valid,    
-    input  logic                 match_equal,     
-    input  logic                 all_paired,      
+    // From board
+    input  logic                 idx_is_valid,
+    input  logic                 match_equal,
+    input  logic                 all_paired,
 
-    // PRNG / Auto-pick (entrega una carta válida cuando se solicita)
-    input  logic                 auto_valid,      
+    // Auto-pick source
+    input  logic                 auto_valid,
     input  logic [IDX_W-1:0]     auto_idx,
 
-    // Temporizador principal (15s)
+    // 15s timer
     input  logic                 timer15_done,
     output logic                 timer15_start,
     output logic                 timer15_reload,
     output logic                 timer15_stop,
 
-    // Mini temporizador 
+    // Mini timer (mismatch hold/cover)
     input  logic                 mini_done,
     output logic                 mini_start,
 
-    // Señales hacia el tablero / vista
-    output logic                 reveal_pulse,    
-    output logic [IDX_W-1:0]     idx_reveal,      
-    output logic                 pair_mark_pulse, 
+    // Board/view
+    output logic                 reveal_pulse,
+    output logic [IDX_W-1:0]     idx_reveal,
+    output logic                 pair_mark_pulse,
 
-    // Señales de control/estado
-    output logic [1:0]           cur_player,      // 1 o 2 (cod: 0->J1, 1->J2)
-    output logic                 score_inc_pulse, // pulso para incrementar puntaje del jugador actual
+    // Control/score
+    output logic [1:0]           cur_player,      // 0=J1, 1=J2
+    output logic                 score_inc_pulse,
     output logic                 gameover,
-    output logic [1:0]           winner,          // 0=J1,1=J2,2=Empate (convención)
+    output logic [1:0]           winner,          // 0=J1, 1=J2, 2=Tie
 
-    // Depuración
+    // Debug
     output logic [3:0]           fsm_state
 );
 
@@ -61,24 +60,25 @@ module mem_fsm #(
     state_t state, nstate;
     assign fsm_state = state;
 
-    // Registros internos
+    // Internal selection latches
     logic [IDX_W-1:0] sel1_idx, sel2_idx;
     logic              sel1_valid, sel2_valid;
 
-    // Puntuación simple interna 
+    // Simple internal score
     int score_j1, score_j2;
 
-    // Jugador actual: 0 -> J1, 1 -> J2
+    // Current player (0: J1, 1: J2)
     logic cur_plr;
     assign cur_player = {1'b0, cur_plr};
 
-    // Ganador (latched cuando entramos a GAMEOVER)
+    // Winner latched at GAMEOVER
     logic [1:0] winner_q;
     assign winner = winner_q;
 
-    // Señales por defecto
+    // Defaults
     always_comb begin
         nstate           = state;
+
         reveal_pulse     = 1'b0;
         idx_reveal       = '0;
         pair_mark_pulse  = 1'b0;
@@ -94,36 +94,35 @@ module mem_fsm #(
 
         unique case (state)
             S_INIT: begin
-                // Se limpian variables y se fija J1
-                timer15_stop  = 1'b1;  
+                timer15_stop  = 1'b1;
                 nstate        = S_TURN_START;
             end
 
             S_TURN_START: begin
-                // Limpia selecciones, arranca timer
+                // Clear selections and (re)start the 15s window
                 timer15_reload = 1'b1;
                 timer15_start  = 1'b1;
-                if (1) nstate  = S_NAV1; 
+                nstate         = S_NAV1;
             end
 
             S_NAV1: begin
-                // Espera pick válido o timeout -> AUTO1
+                // Wait for first pick or timeout -> AUTO1
                 if (timer15_done) begin
                     nstate = S_AUTO1;
                 end else if (pick_valid && idx_is_valid) begin
-                    nstate     = S_REV1;
+                    nstate = S_REV1;
                 end
             end
 
             S_REV1: begin
-                // Revela primera carta
+                // Reveal first card
                 reveal_pulse = 1'b1;
-                idx_reveal   = pick_valid && idx_is_valid ? pick_idx : sel1_idx; 
+                idx_reveal   = pick_valid && idx_is_valid ? pick_idx : sel1_idx;
                 nstate       = S_NAV2;
             end
 
             S_NAV2: begin
-                // Espera segunda carta distinta y válida o timeout -> AUTO2
+                // Wait for second pick (different index) or timeout -> AUTO2
                 if (timer15_done) begin
                     nstate = S_AUTO2;
                 end else if (pick_valid && idx_is_valid && (pick_idx != sel1_idx)) begin
@@ -132,51 +131,53 @@ module mem_fsm #(
             end
 
             S_REV2: begin
-                // Revela segunda carta
+                // Reveal second card
                 reveal_pulse = 1'b1;
-                idx_reveal   = pick_valid && idx_is_valid ? pick_idx : sel2_idx; // por seguridad
+                idx_reveal   = pick_valid && idx_is_valid ? pick_idx : sel2_idx;
                 nstate       = S_EVAL;
             end
 
             S_EVAL: begin
-                // Evalúa y decide si continuar turno o mostrar error/cambiar turno
                 if (match_equal) begin
-                    pair_mark_pulse = 1'b1;
+                    pair_mark_pulse = 1'b1;   // board will mark (top may delay actual write for a brief hold)
                     score_inc_pulse = 1'b1;
                     if (all_paired) begin
                         timer15_stop = 1'b1;
                         nstate       = S_GAMEOVER;
                     end else begin
-                        // Mantiene el turno mismo jugador, recarga timer
+                        // Keep the same player; refresh the 15s window for next pair
                         timer15_reload = 1'b1;
                         nstate         = S_TURN_START;
                     end
                 end else begin
-                    
-                    mini_start = 1'b1; 
+                    // Start short mismatch timer; on done we’ll flip player in the sequential block
+                    mini_start = 1'b1;
                     nstate     = S_SHOWMISS;
                 end
             end
 
             S_SHOWMISS: begin
                 if (mini_done) begin
-                    // Cambiar de jugador, recargar timer y volver a turno
+                    // New turn for the other player, with fresh 15s window in S_TURN_START
                     timer15_reload = 1'b1;
                     nstate         = S_TURN_START;
                 end
             end
 
             S_AUTO1: begin
-                // Selección automática de la primera carta
+                // === CHANGE: when timer expires on first pick, auto-pick ONE card and
+                // restart the 15s timer so the player gets a new window for the second pick ===
                 if (auto_valid) begin
-                    reveal_pulse = 1'b1;
-                    idx_reveal   = auto_idx;
-                    nstate       = S_NAV2;
+                    reveal_pulse   = 1'b1;
+                    idx_reveal     = auto_idx;
+                    timer15_reload = 1'b1;    // give a fresh 15s for second card
+                    timer15_start  = 1'b1;
+                    nstate         = S_NAV2;  // now wait for player; if they still time out, AUTO2 will fire
                 end
             end
 
             S_AUTO2: begin
-                // Selección automática de la segunda carta 
+                // If second pick times out, auto-pick the second card now
                 if (auto_valid) begin
                     reveal_pulse = 1'b1;
                     idx_reveal   = auto_idx;
@@ -193,7 +194,7 @@ module mem_fsm #(
         endcase
     end
 
-    // Estado Registros de selección y jugador
+    // State/regs
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             state      <= S_INIT;
@@ -208,7 +209,7 @@ module mem_fsm #(
         end else begin
             state <= nstate;
 
-            // Captura de índices seleccionados
+            // Capture selected indices
             if (state == S_NAV1 && pick_valid && idx_is_valid) begin
                 sel1_idx   <= pick_idx;
                 sel1_valid <= 1'b1;
@@ -225,27 +226,28 @@ module mem_fsm #(
                 sel2_valid <= 1'b1;
             end
 
-            // Limpieza de selecciones al iniciar turno
+            // Clear selections at turn start
             if (state == S_TURN_START) begin
                 sel1_valid <= 1'b0;
                 sel2_valid <= 1'b0;
             end
 
-            // Puntaje y cambio de jugador
+            // Score on match
             if (state == S_EVAL && match_equal) begin
-                if (cur_plr == 1'b0) score_j1 <= score_j1 + 1; else score_j2 <= score_j2 + 1;
+                if (cur_plr == 1'b0) score_j1 <= score_j1 + 1;
+                else                  score_j2 <= score_j2 + 1;
             end
 
-            // Cambio de jugador sólo en fallo 
+            // Switch player only on mismatch (after mini timer)
             if (state == S_SHOWMISS && mini_done) begin
                 cur_plr <= ~cur_plr;
             end
 
-            // Al llegar a GAMEOVER, latch del ganador
+            // Latch winner at gameover entry
             if (nstate == S_GAMEOVER) begin
                 if (score_j1 > score_j2)      winner_q <= 2'd0; // J1
                 else if (score_j2 > score_j1) winner_q <= 2'd1; // J2
-                else                           winner_q <= 2'd2; // Empate
+                else                           winner_q <= 2'd2; // Tie
             end
         end
     end

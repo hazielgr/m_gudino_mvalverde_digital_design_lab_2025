@@ -523,31 +523,7 @@ module top_memory_game_hex6 #(
     end
 
     // ---------------- 7-seg (active-low) ----------------
-    function automatic logic [6:0] seg7_encode(input logic [3:0] val);
-        logic [6:0] on;
-        begin
-            unique case (val)
-                4'h0: on=7'b1111110; 4'h1: on=7'b0110000; 4'h2: on=7'b1101101; 4'h3: on=7'b1111001;
-                4'h4: on=7'b0110011; 4'h5: on=7'b1011011; 4'h6: on=7'b1011111; 4'h7: on=7'b1110000;
-                4'h8: on=7'b1111111; 4'h9: on=7'b1111011; 4'hA: on=7'b1110111; 4'hB: on=7'b0011111;
-                4'hC: on=7'b1001110; 4'hD: on=7'b0111101; 4'hE: on=7'b1001111; 4'hF: on=7'b1000111;
-                default: on=7'b0000000;
-            endcase
-            seg7_encode = (ACTIVE_LOW_7SEG) ? ~on : on;
-        end
-    endfunction
-
-    function automatic logic [6:0] seg7_blank();
-        logic [6:0] off = (ACTIVE_LOW_7SEG) ? ~7'b0000000 : 7'b0000000;
-        seg7_blank = off;
-    endfunction
-
-    function automatic logic [6:0] seg7_order(input logic [6:0] v);
-        if (REVERSE_SEG_ORDER) seg7_order = {v[0],v[1],v[2],v[3],v[4],v[5],v[6]};
-        else                   seg7_order = v;
-    endfunction
-
-    logic [7:0] disp_t;
+      logic [7:0] disp_t;
     always_comb begin
         disp_t = (t15_running) ? t15_value : 8'd15;
         if (disp_t > 8'd15) disp_t = 8'd15;
@@ -559,12 +535,14 @@ module top_memory_game_hex6 #(
         else begin t_tens=4'd0; t_ones=disp_t[3:0]; end
     end
 
-    assign HEX5 = seg7_order( seg7_encode(t_tens) );
-    assign HEX4 = seg7_order( seg7_encode(t_ones) );
-    assign HEX3 = seg7_order( seg7_blank() );
-    assign HEX2 = seg7_order( seg7_blank() );
-    assign HEX1 = seg7_order( seg7_encode(score_j2) );
-    assign HEX0 = seg7_order( seg7_encode(score_j1) );
+    sevenseg_hex6 #(
+  .ACTIVE_LOW_7SEG(ACTIVE_LOW_7SEG),
+  .REVERSE_SEG_ORDER(REVERSE_SEG_ORDER)
+) u_seg (
+      .t_tens(t_tens), .t_ones(t_ones),
+      .score_j1(score_j1), .score_j2(score_j2),
+      .HEX5(HEX5), .HEX4(HEX4), .HEX3(HEX3), .HEX2(HEX2), .HEX1(HEX1), .HEX0(HEX0)
+    );
 
     // ---------------- Scoreboard ----------------
     logic [3:0] score_j1, score_j2;

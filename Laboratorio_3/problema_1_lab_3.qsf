@@ -95,24 +95,6 @@ set_global_assignment -name EDA_TEST_BENCH_NAME mem_fsm_tb -section_id eda_simul
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id mem_fsm_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME mem_fsm_tb -section_id mem_fsm_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE mem_fsm_tb.sv -section_id mem_fsm_tb
-set_global_assignment -name SYSTEMVERILOG_FILE timer_down.sv
-set_global_assignment -name SYSTEMVERILOG_FILE sevenseg_mux4.sv
-set_global_assignment -name SYSTEMVERILOG_FILE scoreboard.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mem_pkg.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mem_board.sv
-set_global_assignment -name SYSTEMVERILOG_FILE debounce_1shot.sv
-set_global_assignment -name SYSTEMVERILOG_FILE autopick.sv
-set_global_assignment -name SYSTEMVERILOG_FILE vga_timing_640x480.sv
-set_global_assignment -name SYSTEMVERILOG_FILE btn_one_pulse.sv
-set_global_assignment -name SYSTEMVERILOG_FILE cursor_2btn.sv
-set_global_assignment -name SYSTEMVERILOG_FILE top_memory_grid.sv
-set_global_assignment -name SYSTEMVERILOG_FILE pix_enable_div2.sv
-set_global_assignment -name SYSTEMVERILOG_FILE test_pattern.sv
-set_global_assignment -name SYSTEMVERILOG_FILE grid_renderer_icons.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mem_fsm.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mem_fsm_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE top_memory_game.sv
-set_global_assignment -name SYSTEMVERILOG_FILE top_memory_game_hex6.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -165,4 +147,22 @@ set_location_assignment PIN_AG21 -to HEX5[1]
 set_location_assignment PIN_AF21 -to HEX5[0]
 set_location_assignment PIN_AB22 -to led_player1
 set_location_assignment PIN_AC22 -to led_player2
+set_global_assignment -name SYSTEMVERILOG_FILE sevenseg_hex6.sv
+set_global_assignment -name SYSTEMVERILOG_FILE winner_overlay.sv
+set_global_assignment -name SYSTEMVERILOG_FILE timer_down.sv
+set_global_assignment -name SYSTEMVERILOG_FILE scoreboard.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mem_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mem_board.sv
+set_global_assignment -name SYSTEMVERILOG_FILE debounce_1shot.sv
+set_global_assignment -name SYSTEMVERILOG_FILE autopick.sv
+set_global_assignment -name SYSTEMVERILOG_FILE vga_timing_640x480.sv
+set_global_assignment -name SYSTEMVERILOG_FILE btn_one_pulse.sv
+set_global_assignment -name SYSTEMVERILOG_FILE cursor_2btn.sv
+set_global_assignment -name SYSTEMVERILOG_FILE top_memory_grid.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pix_enable_div2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE test_pattern.sv
+set_global_assignment -name SYSTEMVERILOG_FILE grid_renderer_icons.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mem_fsm.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mem_fsm_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE top_memory_game_hex6.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
