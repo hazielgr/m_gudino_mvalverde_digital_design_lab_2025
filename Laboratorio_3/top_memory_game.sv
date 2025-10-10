@@ -1,13 +1,6 @@
 `default_nettype none
-// =============================================================
-// top_memory_game_hex6.sv  (shuffle + autopick + one-time first-turn shuffle)
-// - Shuffle: startup (~50ms after reset), first thinking window on empty board (once), gameover
-// - 15s timer: runs during actual "thinking window"; done -> FSM & autopick only while waiting
-// - Row/Col responsive after shuffle; Select allowed when safe (<2 revealed, no holds/mini)
-// - Match-hold (~0.3s), brown matched cards, mismatch auto-cover, player LEDs
-// - Active-low 7-seg with optional bit order reversal
-// =============================================================
-module top_memory_game_hex6 #(
+
+module top_memory_game #(
     parameter bit ACTIVE_LOW_7SEG   = 1'b1, // 1 = segments active-low (0=ON)
     parameter bit REVERSE_SEG_ORDER = 1'b1  // 1 = output as g..a instead of a..g
 )(
@@ -255,8 +248,7 @@ module top_memory_game_hex6 #(
         have_rev1 & revealed_mask[last_rev1] &
         second_revealed_any & (~match_equal) & mini_done;
 
-    // *** CHANGE #1: let FSM pulse through for both match & mismatch ***
-    wire pair_mark_pulse_g = pair_mark_match_hold | pair_mark_auto | pair_mark_pulse_fsm;
+    wire pair_mark_pulse_g = pair_mark_match_hold | pair_mark_auto | (pair_mark_pulse_fsm & ~match_equal);
     wire reveal_pulse_g    = reveal_pulse_fsm & ready_after_shuffle;
 
     // Shuffle conditions:
@@ -297,13 +289,6 @@ module top_memory_game_hex6 #(
     // Declare t15_done before using
     logic t15_done;
 
-    // *** CHANGE #2: anticipate final mark so FSM sees "done" in S_EVAL ***
-    wire [N_CARDS-1:0] all_ones = {N_CARDS{1'b1}};
-    wire all_paired_fast =
-        all_paired |
-        (match_equal & have_rev1 & second_revealed_any &
-         (((matched_mask | revealed_mask) == all_ones)));
-
     mem_fsm #(.N_CARDS(N_CARDS), .IDX_W(IDX_W)) u_fsm (
         .clk   (clk_50mhz), .rst_n (rst_n),
 
@@ -312,7 +297,7 @@ module top_memory_game_hex6 #(
 
         .idx_is_valid(idx_is_valid),
         .match_equal (match_equal),
-        .all_paired  (all_paired_fast), // <— use fast version
+        .all_paired  (all_paired),
 
         .auto_valid(auto_valid),
         .auto_idx  (auto_idx),
@@ -390,97 +375,10 @@ module top_memory_game_hex6 #(
         .R(base_r), .G(base_g), .B(base_b)
     );
 
-    // === Winner/Tie VGA text (tiny inline 5x7 font) ===
-    // Use distinct names to avoid any clash with grid layout constants
-    localparam int O_CHAR_W=5, O_CHAR_H=7, O_SCALE=3, O_GAP=1;
-    localparam int O_CELL_W=O_CHAR_W*O_SCALE, O_CELL_H=O_CHAR_H*O_SCALE, O_GAP_S=O_GAP*O_SCALE;
-
-    // Font: P,1,2, T, I, E only
-    function automatic logic font_px(input logic [7:0] ch, input int cx, input int cy);
-        localparam logic [4:0] P_ROW [0:6] = '{
-            5'b11110,5'b10001,5'b10001,5'b11110,5'b10000,5'b10000,5'b10000};
-        localparam logic [4:0] ONE_ROW[0:6] = '{
-            5'b00100,5'b01100,5'b00100,5'b00100,5'b00100,5'b00100,5'b01110};
-        localparam logic [4:0] TWO_ROW[0:6] = '{
-            5'b01110,5'b10001,5'b00001,5'b00110,5'b01000,5'b10000,5'b11111};
-        localparam logic [4:0] T_ROW  [0:6] = '{
-            5'b11111,5'b00100,5'b00100,5'b00100,5'b00100,5'b00100,5'b00100};
-        localparam logic [4:0] I_ROW  [0:6] = '{
-            5'b11111,5'b00100,5'b00100,5'b00100,5'b00100,5'b00100,5'b11111};
-        localparam logic [4:0] E_ROW  [0:6] = '{
-            5'b11111,5'b10000,5'b10000,5'b11110,5'b10000,5'b10000,5'b11111};
-        if (cx<0||cx>4||cy<0||cy>6) return 1'b0;
-        unique case (ch)
-            8'h50/*"P"*/: return P_ROW [cy][4-cx];
-            8'h31/*"1"*/: return ONE_ROW[cy][4-cx];
-            8'h32/*"2"*/: return TWO_ROW[cy][4-cx];
-            8'h54/*"T"*/: return T_ROW  [cy][4-cx];
-            8'h49/*"I"*/: return I_ROW  [cy][4-cx];
-            8'h45/*"E"*/: return E_ROW  [cy][4-cx];
-            default: return 1'b0;
-        endcase
-    endfunction
-
-    // Message selection from FSM winner (0=P1,1=P2,2=TIE)
-    logic [7:0] text_msg [0:2];
-    int  text_len;
-    always_comb begin
-        text_msg[0]=8'h54; // 'T'
-        text_msg[1]=8'h49; // 'I'
-        text_msg[2]=8'h45; // 'E'
-        text_len=3;
-        unique case (winner)
-            2'd0: begin text_msg[0]=8'h50; text_msg[1]=8'h31; text_len=2; end // "P1"
-            2'd1: begin text_msg[0]=8'h50; text_msg[1]=8'h32; text_len=2; end // "P2"
-            2'd2: begin text_msg[0]=8'h54; text_msg[1]=8'h49; text_msg[2]=8'h45; text_len=3; end // "TIE"
-            default: ;
-        endcase
-    end
-
-    // Center the message on 640x480
-    int txt_w, txt_x0, txt_y0;
-    always_comb begin
-        txt_w  = (text_len*O_CELL_W) + ((text_len>0?text_len-1:0)*O_GAP_S);
-        txt_x0 = (640 - txt_w) >>> 1;
-        txt_y0 = (480 - O_CELL_H) >>> 1;
-    end
-
-    // Hit test temp variables
-    int relx, rely, acc, char_x0, cx, cy;
-
-    // Hit test for the current pixel
-    logic hit_winner_text;
-    always_comb begin
-        hit_winner_text = 1'b0;
-        relx = 0; rely = 0; acc = 0; char_x0 = 0; cx = 0; cy = 0;
-        if (gameover && video_on &&
-            (x>=txt_x0) && (x<txt_x0+txt_w) &&
-            (y>=txt_y0) && (y<txt_y0+O_CELL_H)) begin
-
-            relx = x - txt_x0;
-            rely = y - txt_y0;
-            acc  = 0;
-            // Fixed upper bound; guard with (i<text_len) for synthesis safety
-            for (int i=0; i<3; i++) begin
-                if (i < text_len) begin
-                    char_x0 = acc;
-                    if (relx >= char_x0 && relx < char_x0 + O_CELL_W) begin
-                        cx = (relx - char_x0) / O_SCALE; // 0..4
-                        cy = (rely) / O_SCALE;            // 0..6
-                        if (font_px(text_msg[i], cx, cy)) begin
-                            hit_winner_text = 1'b1;
-                        end
-                    end
-                    acc += O_CELL_W + O_GAP_S;
-                end
-            end
-        end
-    end
-
     // Layout numbers
     localparam int FRAME=16, GRID_W=640-2*FRAME, GRID_H=480-2*FRAME;
     localparam int GUTTER=8, CARD_W=(GRID_W-3*GUTTER)/4, CARD_H=(GRID_H-3*GUTTER)/4;
-    localparam int CELL_W=(GRID_W-3*GUTTER)/4+GUTTER, CELL_H=(GRID_H-3*GUTTER)/4+GUTTER, BORDER=3;
+    localparam int CELL_W=CARD_W+GUTTER, CELL_H=CARD_H+GUTTER, BORDER=3;
 
     localparam logic [7:0] GRAY_R=8'd200, GRAY_G=8'd200, GRAY_B=8'd200;
     localparam logic [7:0] BROWN_R=8'd160, BROWN_G=8'd110, BROWN_B=8'd50;
@@ -515,37 +413,9 @@ module top_memory_game_hex6 #(
                 vga_r={1'b0,base_r[7:1]}; vga_g={1'b0,base_g[7:1]}; vga_b={1'b0,base_b[7:1]};
             end
         end
-
-        // >>> Winner/Tie overlay: paint text pixels over final color <<<
-        if (gameover && hit_winner_text)
-            {vga_r, vga_g, vga_b} = {8'd255, 8'd220, 8'd0}; // gold text
     end
 
     // ---------------- 7-seg (active-low) ----------------
-    function automatic logic [6:0] seg7_encode(input logic [3:0] val);
-        logic [6:0] on;
-        begin
-            unique case (val)
-                4'h0: on=7'b1111110; 4'h1: on=7'b0110000; 4'h2: on=7'b1101101; 4'h3: on=7'b1111001;
-                4'h4: on=7'b0110011; 4'h5: on=7'b1011011; 4'h6: on=7'b1011111; 4'h7: on=7'b1110000;
-                4'h8: on=7'b1111111; 4'h9: on=7'b1111011; 4'hA: on=7'b1110111; 4'hB: on=7'b0011111;
-                4'hC: on=7'b1001110; 4'hD: on=7'b0111101; 4'hE: on=7'b1001111; 4'hF: on=7'b1000111;
-                default: on=7'b0000000;
-            endcase
-            seg7_encode = (ACTIVE_LOW_7SEG) ? ~on : on;
-        end
-    endfunction
-
-    function automatic logic [6:0] seg7_blank();
-        logic [6:0] off = (ACTIVE_LOW_7SEG) ? ~7'b0000000 : 7'b0000000;
-        seg7_blank = off;
-    endfunction
-
-    function automatic logic [6:0] seg7_order(input logic [6:0] v);
-        if (REVERSE_SEG_ORDER) seg7_order = {v[0],v[1],v[2],v[3],v[4],v[5],v[6]};
-        else                   seg7_order = v;
-    endfunction
-
     logic [7:0] disp_t;
     always_comb begin
         disp_t = (t15_running) ? t15_value : 8'd15;
@@ -558,12 +428,15 @@ module top_memory_game_hex6 #(
         else begin t_tens=4'd0; t_ones=disp_t[3:0]; end
     end
 
-    assign HEX5 = seg7_order( seg7_encode(t_tens) );
-    assign HEX4 = seg7_order( seg7_encode(t_ones) );
-    assign HEX3 = seg7_order( seg7_blank() );
-    assign HEX2 = seg7_order( seg7_blank() );
-    assign HEX1 = seg7_order( seg7_encode(score_j2) );
-    assign HEX0 = seg7_order( seg7_encode(score_j1) );
+    sevenseg_hex6 #(
+  .ACTIVE_LOW_7SEG(ACTIVE_LOW_7SEG),
+  .REVERSE_SEG_ORDER(REVERSE_SEG_ORDER)
+) u_seg (
+      .t_tens(t_tens), .t_ones(t_ones),
+      .score_j1(score_j1), .score_j2(score_j2),
+      .HEX5(HEX5), .HEX4(HEX4), .HEX3(HEX3), .HEX2(HEX2), .HEX1(HEX1), .HEX0(HEX0)
+    );
+
 
     // ---------------- Scoreboard ----------------
     logic [3:0] score_j1, score_j2;
