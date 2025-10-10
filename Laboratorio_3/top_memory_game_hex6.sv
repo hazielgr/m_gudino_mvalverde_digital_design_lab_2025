@@ -1,12 +1,10 @@
 `default_nettype none
 // =============================================================
-// top_memory_game_hex6.sv  (entropy-based shuffle + autopick + 2s fallback)
-// - Shuffle uses human-timed entropy; if none within ~2s of the first thinking
-//   window, it still shuffles using the PRNG (so it never stalls).
-// - Shuffles: first thinking window (once per game), gameover
+// top_memory_game_hex6.sv  (shuffle + autopick + one-time first-turn shuffle)
+// - Shuffle: startup (~50ms after reset), first thinking window on empty board (once), gameover
 // - 15s timer: runs during actual "thinking window"; done -> FSM & autopick only while waiting
 // - Row/Col responsive after shuffle; Select allowed when safe (<2 revealed, no holds/mini)
-// - Match-hold (~0.3 s), brown matched cards, mismatch auto-cover, player LEDs
+// - Match-hold (~0.3s), brown matched cards, mismatch auto-cover, player LEDs
 // - Active-low 7-seg with optional bit order reversal
 // =============================================================
 module top_memory_game_hex6 #(
@@ -41,7 +39,7 @@ module top_memory_game_hex6 #(
     // Six independent 7-seg (HEX5..HEX0), segments a..g in [6:0]
     output logic [6:0]  HEX5, HEX4, HEX3, HEX2, HEX1, HEX0
 );
-    // ---------------- VGA timing ----------------
+    // ---------------- VGA timing scaffolding ----------------
     assign vga_blank_n = 1'b1;
     assign vga_sync_n  = 1'b0;
     assign vga_clk     = clk_50mhz;
@@ -49,37 +47,42 @@ module top_memory_game_hex6 #(
     logic pix_ce;
     pix_enable_div2 u_pixce (.clk_50(clk_50mhz), .rst_n(rst_n), .pix_ce(pix_ce));
 
-    logic video_on; logic [9:0] x, y;
+    logic        video_on;
+    logic [9:0]  x, y;
     vga_timing_640x480_en u_tim (
-        .clk(clk_50mhz), .rst_n(rst_n), .pix_ce(pix_ce),
-        .hsync(vga_hsync), .vsync(vga_vsync),
-        .video_on(video_on), .x(x), .y(y)
+        .clk     (clk_50mhz),
+        .rst_n   (rst_n),
+        .pix_ce  (pix_ce),
+        .hsync   (vga_hsync),   // active-low
+        .vsync   (vga_vsync),   // active-low
+        .video_on(video_on),
+        .x       (x), .y(y)
     );
 
-    // ---------------- Ticks ----------------
-    // 1 kHz
+    // ---------------- Utility ticks ----------------
+    // 1 kHz debounce
     logic [15:0] div1k; logic tick_1khz;
     always_ff @(posedge clk_50mhz or negedge rst_n) begin
-        if (!rst_n) begin div1k<=0; tick_1khz<=0; end
-        else if (div1k==16'd49999) begin div1k<=0; tick_1khz<=1; end
-        else begin div1k<=div1k+16'd1; tick_1khz<=0; end
+        if (!rst_n) begin div1k<=16'd0; tick_1khz<=1'b0; end
+        else if (div1k==16'd49999) begin div1k<=16'd0; tick_1khz<=1'b1; end
+        else begin div1k<=div1k+16'd1; tick_1khz<=1'b0; end
     end
-    // 100 Hz
+    // 100 Hz (mini & match-hold)
     logic [19:0] div100; logic tick_100hz;
     always_ff @(posedge clk_50mhz or negedge rst_n) begin
-        if (!rst_n) begin div100<=0; tick_100hz<=0; end
-        else if (div100==20'd499_999) begin div100<=0; tick_100hz<=1; end
-        else begin div100<=div100+20'd1; tick_100hz<=0; end
+        if (!rst_n) begin div100<=20'd0; tick_100hz<=1'b0; end
+        else if (div100==20'd499_999) begin div100<=20'd0; tick_100hz<=1'b1; end
+        else begin div100<=div100+20'd1; tick_100hz<=1'b0; end
     end
-    // 1 Hz
+    // 1 Hz (15 s)
     logic [25:0] div1; logic tick_1hz;
     always_ff @(posedge clk_50mhz or negedge rst_n) begin
-        if (!rst_n) begin div1<=0; tick_1hz<=0; end
-        else if (div1==26'd49_999_999) begin div1<=0; tick_1hz<=1; end
-        else begin div1<=div1+26'd1; tick_1hz<=0; end
+        if (!rst_n) begin div1<=26'd0; tick_1hz<=1'b0; end
+        else if (div1==26'd49_999_999) begin div1<=26'd0; tick_1hz<=1'b1; end
+        else begin div1<=div1+26'd1; tick_1hz<=1'b0; end
     end
 
-    // ---------------- Debounce ----------------
+    // ---------------- Debounced buttons ----------------
     logic row_pulse, col_pulse, sel_pulse;
     debounce_1shot u_db_row (.clk(clk_50mhz), .rst_n(rst_n), .tick_1khz(tick_1khz),
                              .btn_in(btn_row), .pulse(row_pulse));
@@ -88,99 +91,89 @@ module top_memory_game_hex6 #(
     debounce_1shot u_db_sel (.clk(clk_50mhz), .rst_n(rst_n), .tick_1khz(tick_1khz),
                              .btn_in(btn_sel), .pulse(sel_pulse));
 
-    // ---------------- Cursor ----------------
+    // ---------------- Cursor (0..3 wrap) ----------------
     logic [1:0] sel_row, sel_col;
     logic       row_go,  col_go,  sel_go;
-    cursor_2btn u_cursor (
-        .clk(clk_50mhz), .rst_n(rst_n),
-        .row_pulse(row_go), .col_pulse(col_go),
-        .sel_row(sel_row), .sel_col(sel_col)
-    );
-    logic [3:0] sel_idx; assign sel_idx = {sel_row, sel_col};
 
-    // ---------------- Board & masks ----------------
-    localparam int N_CARDS=16, IDX_W=4;
+    cursor_2btn u_cursor (
+        .clk      (clk_50mhz),
+        .rst_n    (rst_n),
+        .row_pulse(row_go),
+        .col_pulse(col_go),
+        .sel_row  (sel_row),
+        .sel_col  (sel_col)
+    );
+
+    logic [3:0] sel_idx;
+    assign sel_idx = {sel_row, sel_col};
+
+    // ---------------- Board + shuffle ----------------
+    localparam int N_CARDS = 16;
+    localparam int IDX_W   = 4;
+
     logic [N_CARDS-1:0] matched_mask, revealed_mask;
     logic [IDX_W-1:0]   last_rev1;
     logic               have_rev1;
     logic               idx_is_valid, match_equal, all_paired;
 
-    logic             reveal_pulse_fsm;
+    logic             reveal_pulse_fsm;   // from FSM
     logic [IDX_W-1:0] idx_reveal;
-    logic             pair_mark_pulse_fsm;
+    logic             pair_mark_pulse_fsm;// from FSM
 
-    // ---------------- Entropy & PRNG ----------------
-    // Free-running time base for entropy (resets at rst_n, human timing varies thereafter)
-    logic [31:0] time_counter;
+    // Seed: free-run; first shuffle delayed 50 ms for per-reset randomness
+    logic [15:0] rand_seed;
     always_ff @(posedge clk_50mhz or negedge rst_n) begin
-        if (!rst_n) time_counter <= 32'd0;
-        else         time_counter <= time_counter + 32'd1;
+        if (!rst_n) rand_seed <= 16'hACE1;
+        else        rand_seed <= rand_seed + 16'h0041;
     end
 
-    // Accumulate entropy on button events
-    logic [15:0] entropy_accum;
-    logic        entropy_ready;
+    // 50 ms delayed startup shuffle
+    logic [5:0] startup_cnt;
+    logic       startup_armed, startup_shuffle;
     always_ff @(posedge clk_50mhz or negedge rst_n) begin
         if (!rst_n) begin
-            entropy_accum <= 16'h0001;
-            entropy_ready <= 1'b0;
+            startup_cnt     <= 6'd0;
+            startup_armed   <= 1'b1;
+            startup_shuffle <= 1'b0;
         end else begin
-            if (row_pulse) begin
-                entropy_accum <= entropy_accum ^ time_counter[15:0] ^ 16'h1357;
-                entropy_ready <= 1'b1;
-            end
-            if (col_pulse) begin
-                entropy_accum <= entropy_accum ^ time_counter[15:0] ^ 16'h2468;
-                entropy_ready <= 1'b1;
-            end
-            if (sel_pulse) begin
-                entropy_accum <= entropy_accum ^ time_counter[15:0] ^ 16'h9BAD;
-                entropy_ready <= 1'b1;
+            startup_shuffle <= 1'b0;
+            if (startup_armed && tick_1khz) begin
+                if (startup_cnt==6'd49) begin
+                    startup_shuffle <= 1'b1; // one-cycle pulse
+                    startup_armed   <= 1'b0;
+                end else begin
+                    startup_cnt <= startup_cnt + 6'd1;
+                end
             end
         end
     end
 
-    // 16-bit LFSR PRNG (Galois form): x^16 + x^14 + x^13 + x^11 + 1 (0xB400 taps)
-    function automatic logic [15:0] lfsr16_next(input logic [15:0] s);
-        logic [15:0] n;
-        begin
-            n = {s[14:0], 1'b0};
-            if (s[15]) n ^= 16'hB400;
-            lfsr16_next = (n==16'h0000) ? 16'hACE1 : n; // avoid lock-up
-        end
-    endfunction
-
-    logic [15:0] prng_state;
+    // VSYNC settle after shuffle → ready_after_shuffle
+    logic vsync_q; wire vsync_rise;
     always_ff @(posedge clk_50mhz or negedge rst_n) begin
-        if (!rst_n) prng_state <= 16'hD00D;
-        else if (shuffle_fire)  prng_state <= lfsr16_next(prng_state ^ entropy_accum);
-        else                    prng_state <= lfsr16_next(prng_state); // keep moving
+        if (!rst_n) vsync_q<=1'b1; else vsync_q<=vga_vsync;
     end
-
-    // Seed presented to mem_board on each shuffle
-    wire [15:0] seed_now = prng_state ^ entropy_accum;
-
-    // ---------------- Ready-after-shuffle (2 VSYNCs) ----------------
-    logic vsync_q; always_ff @(posedge clk_50mhz or negedge rst_n) if (!rst_n) vsync_q<=1'b1; else vsync_q<=vga_vsync;
-    wire vsync_rise = vga_vsync & ~vsync_q;
+    assign vsync_rise = vga_vsync & ~vsync_q;
 
     logic [1:0] vs_cnt;
     always_ff @(posedge clk_50mhz or negedge rst_n) begin
         if (!rst_n) vs_cnt<=2'd0;
-        else if (shuffle_fire) vs_cnt<=2'd0;
+        else if (shuffle_pulse_w) vs_cnt <= 2'd0;
         else if (vsync_rise && (vs_cnt!=2'd2)) vs_cnt <= vs_cnt + 2'd1;
     end
     wire ready_after_shuffle = (vs_cnt==2'd2);
 
-    // ---------------- Mini mismatch timer (~0.6 s) ----------------
+    // Mini mismatch timer (~0.6 s) with proper "active" flag
     logic mini_start, mini_done, mini_active;
     timer_down #(.WIDTH(8)) u_mini (
         .clk(clk_50mhz), .rst_n(rst_n),
         .tick(tick_100hz),
-        .start(mini_start), .reload(mini_start),
-        .stop(mini_done),
+        .start(mini_start),
+        .reload(mini_start),
+        .stop  (mini_done),
         .preload(8'd60),
-        .done(mini_done), .value()
+        .done(mini_done),
+        .value()
     );
     always_ff @(posedge clk_50mhz or negedge rst_n) begin
         if (!rst_n) mini_active <= 1'b0;
@@ -190,7 +183,7 @@ module top_memory_game_hex6 #(
         end
     end
 
-    // ---------------- Match-hold (~0.3 s) ----------------
+    // Match-hold (~0.3 s)
     localparam [7:0] MATCH_HOLD_TICKS = 8'd30;
     logic        mh_active;
     logic [7:0]  mh_cnt;
@@ -210,22 +203,29 @@ module top_memory_game_hex6 #(
         end
     end
 
-    // ---------------- Gameover edge ----------------
-    logic gameover, gameover_q; always_ff @(posedge clk_50mhz or negedge rst_n) if (!rst_n) gameover_q<=1'b0; else gameover_q<=gameover;
+    // Gameover edge
+    logic gameover, gameover_q;
+    always_ff @(posedge clk_50mhz or negedge rst_n) begin
+        if (!rst_n) gameover_q<=1'b0; else gameover_q<=gameover;
+    end
     wire gameover_rise = gameover & ~gameover_q;
 
-    // ---------------- Controls ----------------
+    // ---------------- Controls (responsive) ----------------
+    // second revealed detection
     wire [15:0] mask_last1 = (16'h0001 << last_rev1);
     wire        second_revealed_any    = |(revealed_mask & ~mask_last1);
     wire        less_than_two_revealed = ~(have_rev1 & second_revealed_any);
 
+    // Row/Col: responsive after shuffle; Select only when safe
     assign row_go = row_pulse & ready_after_shuffle & ~mh_active;
     assign col_go = col_pulse & ready_after_shuffle & ~mh_active;
     assign sel_go = sel_pulse & ready_after_shuffle & ~mh_active & ~mini_active & less_than_two_revealed;
 
-    // ---------------- The "thinking window" ----------------
+    // ---------------- The "thinking window" (idle_window) ----------------
+    // We are ACTUALLY waiting for a pick when Select is legally allowed.
     wire idle_window = ready_after_shuffle & ~mh_active & ~mini_active & less_than_two_revealed;
 
+    // Edges
     logic idle_q;
     always_ff @(posedge clk_50mhz or negedge rst_n) begin
         if (!rst_n) idle_q <= 1'b0;
@@ -234,52 +234,22 @@ module top_memory_game_hex6 #(
     wire idle_rise =  idle_window & ~idle_q;
     wire idle_fall = ~idle_window &  idle_q;
 
-    // ---- 2s watchdog to avoid waiting forever for entropy ----
-    logic [1:0] idle_secs;
-    logic       no_entropy_timeout;
-    always_ff @(posedge clk_50mhz or negedge rst_n) begin
-        if (!rst_n) begin
-            idle_secs          <= 2'd0;
-            no_entropy_timeout <= 1'b0;
-        end else begin
-            // arm on window open
-            if (idle_rise) begin
-                idle_secs          <= 2'd0;
-                no_entropy_timeout <= 1'b0;
-            end
-            // disarm as soon as entropy arrives or window closes
-            if (entropy_ready || idle_fall) begin
-                no_entropy_timeout <= 1'b0;
-            end
-            // count seconds only while we are actually waiting for a pick and no entropy yet
-            if (idle_window && !entropy_ready && tick_1hz && idle_secs != 2'd3) begin
-                idle_secs <= idle_secs + 2'd1;
-                if (idle_secs == 2'd1)  // ~2 seconds total (0->1->2)
-                    no_entropy_timeout <= 1'b1;
-            end
-        end
-    end
-
-    // ---------------- One-time first-turn shuffle per game ----------------
+    // ---------------- One-time first-turn shuffle flag ----------------
     logic did_first_shuffle;
     always_ff @(posedge clk_50mhz or negedge rst_n) begin
         if (!rst_n) begin
             did_first_shuffle <= 1'b0;
         end else begin
-            if (gameover_rise)           did_first_shuffle <= 1'b0; // new game context
-            else if (first_turn_shuffle) did_first_shuffle <= 1'b1;
+            // Clear flag on new game context
+            if (startup_shuffle || gameover_rise)
+                did_first_shuffle <= 1'b0;
+            // Latch after firing first-turn shuffle
+            if (first_turn_shuffle)
+                did_first_shuffle <= 1'b1;
         end
     end
 
-    // Shuffle fires when: (A) FIRST thinking window, board empty, not yet done,
-    // and EITHER entropy arrives OR the 2s watchdog hits (can happen AFTER idle_rise),
-    // or (B) on gameover rising edge.
-    wire board_empty        = (matched_mask=='0) && (revealed_mask=='0) && ~have_rev1;
-    wire first_turn_shuffle = (~did_first_shuffle) & board_empty & idle_window
-                              & (entropy_ready | no_entropy_timeout);
-    wire shuffle_fire       = first_turn_shuffle | gameover_rise;
-
-    // ---------------- Board instance ----------------
+    // ---------------- Board instance & helpers ----------------
     // Mismatch safety auto-cover
     wire pair_mark_auto =
         have_rev1 & revealed_mask[last_rev1] &
@@ -288,6 +258,14 @@ module top_memory_game_hex6 #(
     wire pair_mark_pulse_g = pair_mark_match_hold | pair_mark_auto | (pair_mark_pulse_fsm & ~match_equal);
     wire reveal_pulse_g    = reveal_pulse_fsm & ready_after_shuffle;
 
+    // Shuffle conditions:
+    //  - startup (after 50ms seed warmup)
+    //  - first thinking window on an empty board (once per game)
+    //  - gameover
+    wire board_empty        = (matched_mask=='0) && (revealed_mask=='0) && ~have_rev1;
+    wire first_turn_shuffle = idle_rise & board_empty & ~did_first_shuffle;
+    wire shuffle_pulse_w    = startup_shuffle | first_turn_shuffle | gameover_rise;
+
     mem_board #(.N_CARDS(N_CARDS), .IDX_W(IDX_W)) u_board (
         .clk(clk_50mhz), .rst_n(rst_n),
         .query_idx(sel_idx),
@@ -295,8 +273,8 @@ module top_memory_game_hex6 #(
         .reveal_pulse   (reveal_pulse_g),
         .idx_reveal     (idx_reveal),
         .pair_mark_pulse(pair_mark_pulse_g),
-        .shuffle_pulse  (shuffle_fire),
-        .shuffle_seed   (prng_state ^ entropy_accum), // seed_now
+        .shuffle_pulse  (shuffle_pulse_w),
+        .shuffle_seed   (rand_seed),
         .matched_mask (matched_mask),
         .revealed_mask(revealed_mask),
         .last_rev1    (last_rev1),
@@ -306,17 +284,20 @@ module top_memory_game_hex6 #(
         .all_paired(all_paired)
     );
 
-    // ---------------- FSM ----------------
+    // ---------------- FSM (authoritative) ----------------
     logic [3:0] fsm_state;
     logic [1:0] cur_player;
     logic       score_inc_pulse;
     logic [1:0] winner;
 
+    // 15s timer handshake signals from FSM
     logic t15_start, t15_reload, t15_stop;
+
+    // Declare t15_done before using
     logic t15_done;
 
     mem_fsm #(.N_CARDS(N_CARDS), .IDX_W(IDX_W)) u_fsm (
-        .clk(clk_50mhz), .rst_n(rst_n),
+        .clk   (clk_50mhz), .rst_n (rst_n),
 
         .pick_valid(sel_go),
         .pick_idx  (sel_idx),
@@ -328,7 +309,8 @@ module top_memory_game_hex6 #(
         .auto_valid(auto_valid),
         .auto_idx  (auto_idx),
 
-        // 15s timer handshake (mask done so it can't expire mid-pick)
+        // 15s timer handshake:
+        // mask "done" by the real thinking window so it cannot expire mid-pick
         .timer15_done (t15_done & idle_window),
         .timer15_start(t15_start),
         .timer15_reload(t15_reload),
@@ -352,6 +334,8 @@ module top_memory_game_hex6 #(
 
     // ---------------- 15s timer (FSM + window-edge fallbacks) ----------------
     logic [7:0] t15_value; logic t15_running;
+
+    // Allow FSM to drive; also start/reload on thinking-window rise, stop on fall
     wire t15_start_d  = t15_start  | idle_rise;
     wire t15_reload_d = t15_reload | idle_rise;
     wire t15_stop_d   = t15_stop   | idle_fall;
@@ -376,7 +360,7 @@ module top_memory_game_hex6 #(
     logic        auto_valid_raw; logic [3:0] auto_idx;
     autopick #(.N_CARDS(N_CARDS), .IDX_W(IDX_W)) u_auto (
         .clk(clk_50mhz), .rst_n(rst_n),
-        .timer15_done(t15_done & idle_window),
+        .timer15_done(t15_done & idle_window), // only while waiting
         .matched_mask(matched_mask),
         .revealed_mask(revealed_mask),
         .exclude_valid(have_rev1),
@@ -398,7 +382,7 @@ module top_memory_game_hex6 #(
         .R(base_r), .G(base_g), .B(base_b)
     );
 
-    // Layout
+    // Layout numbers
     localparam int FRAME=16, GRID_W=640-2*FRAME, GRID_H=480-2*FRAME;
     localparam int GUTTER=8, CARD_W=(GRID_W-3*GUTTER)/4, CARD_H=(GRID_H-3*GUTTER)/4;
     localparam int CELL_W=CARD_W+GUTTER, CELL_H=CARD_H+GUTTER, BORDER=3;
@@ -408,12 +392,16 @@ module top_memory_game_hex6 #(
     localparam logic [7:0] BLACK_R=8'd0, BLACK_G=8'd0, BLACK_B=8'd0;
 
     logic in_frame; assign in_frame = (x>=FRAME)&&(x<FRAME+GRID_W)&&(y>=FRAME)&&(y<FRAME+GRID_H);
-    logic [9:0] gx,gy; assign gx = x - FRAME; assign gy = y - FRAME;
-    logic [1:0] card_c,card_r; assign card_c = gx / CELL_W; assign card_r = gy / CELL_H;
+
+    logic [9:0] gx, gy; assign gx = x - FRAME; assign gy = y - FRAME;
+    logic [1:0] card_c, card_r; assign card_c = gx / CELL_W; assign card_r = gy / CELL_H;
     logic [8:0] lx; logic [7:0] ly; assign lx = gx - card_c*CELL_W; assign ly = gy - card_r*CELL_H;
+
     logic in_card_rect; assign in_card_rect = (lx < CARD_W) && (ly < CARD_H);
-    logic sel_border; assign sel_border = (card_r==sel_row)&&(card_c==sel_col)&&in_card_rect &&
-                                         ((lx<BORDER)||(lx>=CARD_W-BORDER)||(ly<BORDER)||(ly>=CARD_H-BORDER));
+    logic sel_border;
+    assign sel_border = (card_r==sel_row)&&(card_c==sel_col)&&in_card_rect &&
+                        ( (lx<BORDER)||(lx>=CARD_W-BORDER)||(ly<BORDER)||(ly>=CARD_H-BORDER) );
+
     logic [3:0] pix_idx; assign pix_idx = {card_r,card_c};
 
     always_comb begin
@@ -423,17 +411,18 @@ module top_memory_game_hex6 #(
         end else if (in_frame && in_card_rect && !sel_border) begin
             if (!revealed_mask[pix_idx]) begin
                 if (matched_mask[pix_idx]) begin
-                    vga_r=BROWN_R; vga_g=BROWN_G; vga_b=BROWN_B;
+                    vga_r=BROWN_R; vga_g=BROWN_G; vga_b=BROWN_B; // matched face-down
                 end else begin
-                    vga_r=GRAY_R;  vga_g=GRAY_G;  vga_b=GRAY_B;
+                    vga_r=GRAY_R;  vga_g=GRAY_G;  vga_b=GRAY_B;  // unmatched face-down
                 end
             end else if (matched_mask[pix_idx]) begin
+                // matched while revealed (during hold): dim
                 vga_r={1'b0,base_r[7:1]}; vga_g={1'b0,base_g[7:1]}; vga_b={1'b0,base_b[7:1]};
             end
         end
     end
 
-    // ---------------- 7-seg ----------------
+    // ---------------- 7-seg (active-low) ----------------
     function automatic logic [6:0] seg7_encode(input logic [3:0] val);
         logic [6:0] on;
         begin
@@ -447,23 +436,29 @@ module top_memory_game_hex6 #(
             seg7_encode = (ACTIVE_LOW_7SEG) ? ~on : on;
         end
     endfunction
+
     function automatic logic [6:0] seg7_blank();
         logic [6:0] off = (ACTIVE_LOW_7SEG) ? ~7'b0000000 : 7'b0000000;
         seg7_blank = off;
     endfunction
+
     function automatic logic [6:0] seg7_order(input logic [6:0] v);
         if (REVERSE_SEG_ORDER) seg7_order = {v[0],v[1],v[2],v[3],v[4],v[5],v[6]};
         else                   seg7_order = v;
     endfunction
 
-    logic [7:0] disp_t; always_comb begin
+    logic [7:0] disp_t;
+    always_comb begin
         disp_t = (t15_running) ? t15_value : 8'd15;
         if (disp_t > 8'd15) disp_t = 8'd15;
     end
-    logic [3:0] t_tens,t_ones; always_comb begin
+
+    logic [3:0] t_tens, t_ones;
+    always_comb begin
         if (disp_t >= 8'd10) begin t_tens=4'd1; t_ones=disp_t-8'd10; end
         else begin t_tens=4'd0; t_ones=disp_t[3:0]; end
     end
+
     assign HEX5 = seg7_order( seg7_encode(t_tens) );
     assign HEX4 = seg7_order( seg7_encode(t_ones) );
     assign HEX3 = seg7_order( seg7_blank() );
@@ -475,7 +470,8 @@ module top_memory_game_hex6 #(
     logic [3:0] score_j1, score_j2;
     scoreboard u_scores (
         .clk(clk_50mhz), .rst_n(rst_n),
-        .cur_player(cur_player), .score_inc_pulse(score_inc_pulse),
+        .cur_player(cur_player),
+        .score_inc_pulse(score_inc_pulse),
         .score_j1(score_j1), .score_j2(score_j2)
     );
 
