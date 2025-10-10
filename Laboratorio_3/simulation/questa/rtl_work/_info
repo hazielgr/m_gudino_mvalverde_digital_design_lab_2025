@@ -1,0 +1,297 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/simulation/questa
+vautopick
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1760084753
+!i10b 1
+!s100 =a>Z>4X`iX?D@C^8<[Xlh3
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I46Gbn94a>4c^eELo2eOed2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+Z5 w1760090476
+8C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/autopick.sv
+FC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/autopick.sv
+!i122 5
+L0 5 56
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z7 !s108 1760084753.000000
+!s107 C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/autopick.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3|C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/autopick.sv|
+!i113 1
+Z8 o-sv -work work
+Z9 !s92 -sv -work work +incdir+C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3
+Z10 tCvgOpt 0
+vcursor_2btn
+R1
+Z11 !s110 1760084754
+!i10b 1
+!s100 Q_a`@I2NHA`[UD_iJ_eCn1
+R3
+ITT`c;mCLBenh72`m]05<E0
+R4
+S1
+R0
+w1759887278
+8C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/cursor_2btn.sv
+FC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/cursor_2btn.sv
+!i122 7
+L0 1 18
+R6
+r1
+!s85 0
+31
+Z12 !s108 1760084754.000000
+!s107 C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/cursor_2btn.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3|C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/cursor_2btn.sv|
+!i113 1
+R8
+R9
+R10
+vdebounce_1shot
+R1
+R2
+!i10b 1
+!s100 ZFKJ?L<a41UFRAaM6_cf_0
+R3
+I>7NO:U[?@5h<>fX`U<8C42
+R4
+S1
+R0
+w1759887695
+8C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/debounce_1shot.sv
+FC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/debounce_1shot.sv
+!i122 4
+Z13 L0 5 41
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/debounce_1shot.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3|C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/debounce_1shot.sv|
+!i113 1
+R8
+R9
+R10
+vgrid_renderer_icons
+R1
+R11
+!i10b 1
+!s100 dnY_FU^I8gFVhhI8ZZe?F1
+R3
+IKXMVaWAadbY?P7<:b@WX70
+R4
+S1
+R0
+R5
+8C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/grid_renderer_icons.sv
+FC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/grid_renderer_icons.sv
+!i122 9
+L0 3 245
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/grid_renderer_icons.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3|C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/grid_renderer_icons.sv|
+!i113 1
+R8
+R9
+R10
+vmem_board
+R1
+R2
+!i10b 1
+!s100 P7C0NA7dgjSV@nWncA?1>0
+R3
+Ibk8z>RYAdG<^dC[fiCFJb1
+R4
+S1
+R0
+R5
+8C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/mem_board.sv
+FC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/mem_board.sv
+!i122 3
+L0 7 177
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/mem_board.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3|C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/mem_board.sv|
+!i113 1
+R8
+R9
+R10
+vmem_fsm
+R1
+!s110 1760084755
+!i10b 1
+!s100 _>18k4XA4cThm>Y8d`SI@1
+R3
+Ii^TAWCR5cNIbPiW=9T8QC0
+R4
+S1
+R0
+w1760079007
+8C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/mem_fsm.sv
+FC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/mem_fsm.sv
+!i122 10
+L0 1 255
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/mem_fsm.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3|C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/mem_fsm.sv|
+!i113 1
+R8
+R9
+R10
+vpix_enable_div2
+R1
+R11
+!i10b 1
+!s100 fXUI:`dzaY@c^_z<MO<@a3
+R3
+I3`ESil4iD@35>?]M7zoHI2
+R4
+S1
+R0
+w1760093146
+8C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/pix_enable_div2.sv
+FC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/pix_enable_div2.sv
+!i122 8
+L0 2 12
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/pix_enable_div2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3|C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/pix_enable_div2.sv|
+!i113 1
+R8
+R9
+R10
+vscoreboard
+R1
+R2
+!i10b 1
+!s100 8;`3RO72mBOISjB]27eDg3
+R3
+I2Y=UIj920n14VWLKhTgj^3
+R4
+S1
+R0
+w1759887697
+8C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/scoreboard.sv
+FC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/scoreboard.sv
+!i122 2
+L0 4 16
+R6
+r1
+!s85 0
+31
+Z14 !s108 1760084752.000000
+!s107 C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/scoreboard.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3|C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/scoreboard.sv|
+!i113 1
+R8
+R9
+R10
+vsevenseg_hex6
+R1
+Z15 !s110 1760084752
+!i10b 1
+!s100 nd2k?5PE7G74A8I82geY51
+R3
+IWz=6j4c<JMn^9:>jLfW1F2
+R4
+S1
+R0
+w1760096232
+8C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/sevenseg_hex6.sv
+FC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/sevenseg_hex6.sv
+!i122 0
+L0 6 46
+R6
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/sevenseg_hex6.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3|C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/sevenseg_hex6.sv|
+!i113 1
+R8
+R9
+R10
+vtimer_down
+R1
+R15
+!i10b 1
+!s100 R:^D2l2B2@nE2[AGCZa9A1
+R3
+I>Xd]LQho@^TT3[jM4KeHM1
+R4
+S1
+R0
+w1759887687
+8C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/timer_down.sv
+FC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/timer_down.sv
+!i122 1
+R13
+R6
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/timer_down.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3|C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/timer_down.sv|
+!i113 1
+R8
+R9
+R10
+vvga_timing_640x480_en
+R1
+R11
+!i10b 1
+!s100 hfz=z5OVfILKmg`7eUgb83
+R3
+IHUFaljni7BXFZgF1g?AXF0
+R4
+S1
+R0
+R5
+8C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/vga_timing_640x480.sv
+FC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/vga_timing_640x480.sv
+!i122 6
+L0 2 34
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/vga_timing_640x480.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3|C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/vga_timing_640x480.sv|
+!i113 1
+R8
+R9
+R10

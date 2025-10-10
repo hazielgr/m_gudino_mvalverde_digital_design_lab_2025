@@ -1,0 +1,136 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3
+vautopick
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1760084773
+!i10b 1
+!s100 =a>Z>4X`iX?D@C^8<[Xlh3
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IZ5TUN7[kU@idMzB03TeR[1
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+Z5 w1760090476
+8autopick.sv
+Fautopick.sv
+!i122 8
+L0 5 56
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z7 !s108 1760084772.000000
+!s107 tb_mem_fsm.sv|scoreboard.sv|autopick.sv|mem_fsm.sv|mem_board.sv|
+Z8 !s90 -reportprogress|300|-sv|+acc|mem_board.sv|mem_fsm.sv|autopick.sv|scoreboard.sv|tb_mem_fsm.sv|
+!i113 1
+Z9 o-sv +acc
+Z10 tCvgOpt 0
+vmem_board
+R1
+R2
+!i10b 1
+!s100 P7C0NA7dgjSV@nWncA?1>0
+R3
+ISKRc=T?chRc3SBYB0T6MY2
+R4
+S1
+R0
+R5
+8mem_board.sv
+Fmem_board.sv
+!i122 8
+L0 7 177
+R6
+r1
+!s85 0
+31
+R7
+Z11 !s107 tb_mem_fsm.sv|scoreboard.sv|autopick.sv|mem_fsm.sv|mem_board.sv|
+R8
+!i113 1
+R9
+R10
+vmem_fsm
+R1
+R2
+!i10b 1
+!s100 _>18k4XA4cThm>Y8d`SI@1
+R3
+IR;RJkHIfK66>HcX22ZeP_1
+R4
+S1
+R0
+w1760079007
+8mem_fsm.sv
+Fmem_fsm.sv
+!i122 8
+L0 1 255
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 1
+R9
+R10
+vscoreboard
+R1
+R2
+!i10b 1
+!s100 8;`3RO72mBOISjB]27eDg3
+R3
+I8`HeaK;@RDQL1`P`E>3lX0
+R4
+S1
+R0
+w1759887697
+8scoreboard.sv
+Fscoreboard.sv
+!i122 8
+L0 4 16
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 1
+R9
+R10
+vtb_mem_fsm
+R1
+R2
+!i10b 1
+!s100 OGPXeGfBdFlRcb>XB^D0H3
+R3
+Ik?ni6N[4m_cH314TNliWU1
+R4
+S1
+R0
+w1760084708
+8tb_mem_fsm.sv
+Ftb_mem_fsm.sv
+!i122 8
+L0 3 364
+R6
+r1
+!s85 0
+31
+R7
+R11
+R8
+!i113 1
+R9
+R10
