@@ -1,0 +1,3 @@
+cd C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3
+
+do C:/Users/mario/Documents/QuartusProjects/m_gudino_mvalverde_digital_design_lab_2025/Laboratorio_3/run_tb.do
